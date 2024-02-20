@@ -1,6 +1,6 @@
 <template>
 <nav class="p-7 flex justify-between">
-    <router-link class="text-1xl font-sans text-green" to="/">
+    <router-link class="text-1xl font-sans text-green" to="/index">
         Rick and Morty Project
     </router-link>
     <div class="router-links flex">
@@ -38,7 +38,7 @@ export default {
 
     // scss to change the colour of a button once active.
     &.router-link-exact-active {
-        color: #4b78ea;
+        color: #2755c7;
     }
 }
 
