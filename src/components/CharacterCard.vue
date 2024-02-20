@@ -18,10 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 .character-card {
-  
     .overlay {
         background: rgba(0, 0, 0, 0.315);
     }

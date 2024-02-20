@@ -2,9 +2,9 @@
 <div>
     <div class="m-8 flex flex-col items-center">
         <div class="flex flex-row">
-            <div class="button">Sort</div>
-            <div class="button ml-8">Filter</div>
-            <div class="button ml-8">Clear All</div>
+            <div class="button cursor-pointer">Sort</div>
+            <div class="button cursor-pointer ml-8">Filter</div>
+            <div class="button cursor-pointer ml-8">Clear All</div>
         </div>
     </div>
     <div class="flex flex-row flex-wrap justify-between mx-32">
