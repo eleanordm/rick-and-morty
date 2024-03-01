@@ -1,5 +1,7 @@
 <template>
-<div class="footer"></div>
+<div class="footer w-full bottom-0 h-36">
+    <div class="text flex justify-center text-white pt-3">By Eleanor Davis Mullen 2024</div>
+</div>
 </template>
 
 <script>
@@ -7,24 +9,6 @@ export default {
     name: 'WebsiteFooter',
 }
 </script>
+<style scoped>
 
-<style lang="scss">
-.page-container {
-    position: relative;
-    min-height: 100vh;
-}
-
-.content-wrap {
-    /* Removed position absolute and added 100% vph so anything above the div will take up the full length of the screen */
-    min-height: 100vh;
-    padding-bottom: 3.5rem;
-    /* Footer height */
-}
-
-.footer {
-    bottom: 0;
-    width: 100%;
-    height: 8.5rem;
-    /* Footer height */
-}
 </style>

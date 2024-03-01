@@ -1,8 +1,8 @@
 <template>
 <div>
     <body>
-        <div class="page-container">
-            <div class="content-wrap">
+        <div class="page-container relative min-h-screen">
+            <div class="content-wrap min-h-screen pb-14">
                 <nav-bar></nav-bar>
                 <router-view></router-view>
             </div>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss">
- @import "@/assets/scss/global.scss";
+@import "@/assets/scss/global.scss";
 
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -37,5 +37,6 @@ export default {
 
 body {
     margin: 0px;
-    background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgb(13, 13, 38) 60% );}
+    background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgb(13, 13, 38) 60%);
+}
 </style>

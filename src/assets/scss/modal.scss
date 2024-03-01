@@ -1,0 +1,23 @@
+.modal {
+    backdrop-filter: blur(1.2px);
+}
+
+.modal-content {
+    background: linear-gradient(to right, hsl(208, 36%, 10%), hsl(253, 53%, 12%));
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.close {
+    transition: .2s;
+    border: 1.5px solid rgb(255, 255, 255);
+}
+
+.close:hover,
+.close:focus {
+    background-color: #618EFF;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transform: translateY(-.1rem);
+}
