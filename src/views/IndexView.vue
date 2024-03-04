@@ -25,6 +25,8 @@
     <div class="flex flex-row flex-wrap justify-between mx-32">
         <character-card v-for="character in characters" :key="character" :image="character.image" :name="character.name">
         </character-card>
+        <character-card-skeleton v-for="character in characters" :key="character">
+        </character-card-skeleton>
     </div>
 
     <div class="modal flex items-center justify-center fixed inset-0 w-full h-full overflow-auto" v-if="showSortModal == true">
@@ -85,6 +87,8 @@
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
 import CharacterCard from '../components/CharacterCard.vue'
+import CharacterCardSkeleton from '../components/CharacterCardSkeleton.vue'
+
 
 /* Pauses all functions until function with axios & await is fullfilled */
 import axios from 'axios'
@@ -93,7 +97,8 @@ export default {
     name: 'IndexView',
     components: {
         HelloWorld,
-        CharacterCard
+        CharacterCard,
+        CharacterCardSkeleton
     },
     data: function () {
         return {
