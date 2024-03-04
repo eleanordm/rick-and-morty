@@ -5,15 +5,12 @@
 <script>
 export default {
     name: 'CharacterCardSkeleton',
-    props: {
-
-    },
 }
 </script>
 
 <style lang="scss" scoped>
 .character-card {
-    background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgb(7, 7, 19) 60%);
+    background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgb(8, 8, 21) 60%);
 }
 </style>
   

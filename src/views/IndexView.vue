@@ -25,8 +25,10 @@
     <div class="flex flex-row flex-wrap justify-between mx-32">
         <character-card v-for="character in characters" :key="character" :image="character.image" :name="character.name">
         </character-card>
-        <character-card-skeleton v-for="character in characters" :key="character">
-        </character-card-skeleton>
+        <div v-if="skeletonLoading">
+            <character-card-skeleton v-for="character in characters" :key="character">
+            </character-card-skeleton>
+        </div>
     </div>
 
     <div class="modal flex items-center justify-center fixed inset-0 w-full h-full overflow-auto" v-if="showSortModal == true">
@@ -105,18 +107,20 @@ export default {
             characters: [],
             showSortModal: false,
             showFilterModal: false,
+            skeletonLoading: false
         }
     },
     created: function () {
+        setTimeout(() => {
+            this.getCharacterData()
+        }, 1000)
         /* Gets character data on page load */
-        this.getCharacterData()
     },
     methods: {
         /* Gets all character data */
         getCharacterData: async function () {
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,40,41,42,43,44,45")
             this.characters = rawData.data
-            console.log(this.characters)
         },
         toggleSortModal: function () {
             if (this.showSortModal == false) {
