@@ -1,5 +1,5 @@
 <template>
-<img src="../assets/skeleton.png" class="character-card w-[200px] h-[260px] mb-[10px] pb-[0px] rounded-3xl object-cover">
+<img src="../assets/rick-skeleton.png" class="character-card w-[200px] h-[260px] mb-[10px] pb-[0px] rounded-3xl object-cover">
 </template>
 
 <script>
@@ -10,7 +10,6 @@ export default {
 
 <style lang="scss" scoped>
 .character-card {
-    background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgb(8, 8, 21) 60%);
+    background-image: linear-gradient(111.4deg, rgb(21, 21, 27) 6.5%, rgb(4, 4, 11) 60%);
 }
 </style>
-  

@@ -22,13 +22,13 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-row flex-wrap justify-between mx-32">
+    <div class="flex flex-row flex-wrap justify-between mx-32" v-if="skeletonLoading == false">
         <character-card v-for="character in characters" :key="character" :image="character.image" :name="character.name">
         </character-card>
-        <div v-if="skeletonLoading">
-            <character-card-skeleton v-for="character in characters" :key="character">
-            </character-card-skeleton>
-        </div>
+    </div>
+    <div class="flex flex-row flex-wrap justify-between mx-32" v-if="skeletonLoading">
+        <character-card-skeleton v-for="character in characters" :key="character">
+        </character-card-skeleton>
     </div>
 
     <div class="modal flex items-center justify-center fixed inset-0 w-full h-full overflow-auto" v-if="showSortModal == true">
@@ -91,7 +91,6 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import CharacterCard from '../components/CharacterCard.vue'
 import CharacterCardSkeleton from '../components/CharacterCardSkeleton.vue'
 
-
 /* Pauses all functions until function with axios & await is fullfilled */
 import axios from 'axios'
 
@@ -107,14 +106,15 @@ export default {
             characters: [],
             showSortModal: false,
             showFilterModal: false,
-            skeletonLoading: false
+            skeletonLoading: true
         }
     },
     created: function () {
         setTimeout(() => {
             this.getCharacterData()
-        }, 1000)
+        }, 500)
         /* Gets character data on page load */
+        this.getCharacterData()
     },
     methods: {
         /* Gets all character data */
