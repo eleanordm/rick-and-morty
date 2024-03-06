@@ -22,13 +22,12 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-row flex-wrap justify-between mx-32">
+    <div class="flex flex-row flex-wrap justify-between mx-32" v-if="loading == false">
         <character-card v-for="character in characters" :key="character" :image="character.image" :name="character.name">
         </character-card>
     </div>
-    <div class="flex flex-row flex-wrap justify-between mx-32">
-        <character-card-skeleton v-for="character in characters" :key="character">
-        </character-card-skeleton>
+    <div class="flex flex-row flex-wrap justify-between mx-32" v-if="loading == true">
+        <character-card-skeleton></character-card-skeleton>
     </div>
 
     <div class="modal flex items-center justify-center fixed inset-0 w-full h-full overflow-auto" v-if="showSortModal == true">
@@ -106,14 +105,16 @@ export default {
             characters: [],
             showSortModal: false,
             showFilterModal: false,
-            characterCardLoading: false,
+            loading: true
         }
     },
     created: function () {
         /* Gets character data on page load */
         setTimeout(() => {
-            this.getCharacterData()
-        }, 1000)       
+            this.loading = false
+        }, 300)
+    
+        this.getCharacterData()
     },
     methods: {
         /* Gets all character data */
