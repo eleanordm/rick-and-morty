@@ -36,13 +36,13 @@
                 <span class="close flex justify-center content-center text-white text-lg font-bold w-8 h-8 rounded-full" @click="closeSortModal()">&times;</span>
             </div>
             <div class="font-sans text-blue">Sort by</div>
-            <div class="button w-48 pl-3 cursor-pointer mt-7">
+            <div class="button w-48 pl-3 cursor-pointer mt-7" @click="sortIdAscending()">
                 ID ascending
                 <span class="material-symbols-outlined">
                     expand_less
                 </span>
             </div>
-            <div class="button w-48 pl-3 cursor-pointer mt-7">
+            <div class="button w-48 pl-3 cursor-pointer mt-7" @click="sortIdDecending()">
                 ID descending
                 <span class="material-symbols-outlined pr-1">
                     expand_more
@@ -123,6 +123,8 @@ export default {
             /* 38 characters in total */
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,40,41,42,43,44,45")
             this.characters = rawData.data
+
+            console.log(this.characters)
         },
         toggleSortModal: function () {
             if (this.showSortModal == false) {
@@ -159,6 +161,16 @@ export default {
                 }
                 return 0;
             });
+        },
+        /* Sort characters by id - ascending */
+        sortIdAscending: function () {
+            this.characters.sort((a, b) => a.id - b.id);
+        },
+        /* Sort characters by id - decending */
+        sortIdDecending: function () {
+            this.characters.sort((a, b) => a.id - b.id);
+            this.characters.reverse();
+            return this.characters;
         }
     }
 }
