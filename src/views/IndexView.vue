@@ -48,7 +48,7 @@
                     expand_more
                 </span>
             </div>
-            <div class="button w-48 pl-3 cursor-pointer mt-7">
+            <div class="button w-48 pl-3 cursor-pointer mt-7" @click="sortAlphabetically()">
                 Alphabetical
                 <span class="material-symbols-outlined pl-1">
                     sort_by_alpha
@@ -147,6 +147,18 @@ export default {
         },
         closeFilterModal: function () {
             this.showFilterModal = false
+        },
+        /* Sort characters alphabetically */
+        sortAlphabetically: function () {
+            this.characters.sort(function (a, b) {
+                if (a.name < b.name) {
+                    return -1;
+                }
+                if (a.name > b.name) {
+                    return 1;
+                }
+                return 0;
+            });
         }
     }
 }
