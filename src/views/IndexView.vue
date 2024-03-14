@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-row flex-wrap justify-between mx-32" v-if="loading == false">
+    <div class="flex flex-row flex-wrap justify-center mx-32" v-if="loading == false">
         <character-card v-for="character in characters" :key="character" :image="character.image" :name="character.name">
         </character-card>
     </div>
@@ -62,19 +62,19 @@
                 <span class="close flex justify-center content-center text-white text-lg font-bold w-8 h-8 rounded-full" @click="closeFilterModal()">&times;</span>
             </div>
             <div class="font-sans text-blue">Filter by</div>
-            <div class="button w-35 pl-3 cursor-pointer mt-7">
+            <div class="button w-35 pl-3 cursor-pointer mt-7" @click="filterOnlyHumanCharacters()">
                 Human
                 <span class="material-symbols-outlined pl-1">
                     person
                 </span>
             </div>
-            <div class="button w-35 pl-3 cursor-pointer mt-7">
+            <div class="button w-35 pl-3 cursor-pointer mt-7" @click="filterOnlyAliveCharacters()">
                 Alive
                 <span class="material-symbols-outlined pl-1">
                     ecg_heart
                 </span>
             </div>
-            <div class="button w-35 pl-3 cursor-pointer mt-7">
+            <div class="button w-35 pl-3 cursor-pointer mt-7" @click="filterOnlyDeadCharacters()">
                 Dead
                 <span class="material-symbols-outlined pl-1">
                     skull
@@ -120,7 +120,7 @@ export default {
     methods: {
         /* Gets all character data */
         getCharacterData: async function () {
-            /* 38 characters in total */
+            /* 38 characters in total, removed id's with no image */
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,40,41,42,43,44,45")
             this.characters = rawData.data
 
@@ -170,7 +170,21 @@ export default {
         sortIdDecending: function () {
             this.characters.sort((a, b) => a.id - b.id);
             this.characters.reverse();
-            return this.characters;
+        },
+        filterOnlyHumanCharacters: function () {
+            this.characters = this.characters.filter((item) => {
+                return (item.species == "Human")
+            })
+        },
+        filterOnlyAliveCharacters: function () {
+            this.characters = this.characters.filter((item) => {
+                return (item.status == "Alive")
+            })
+        },
+        filterOnlyDeadCharacters: function () {
+            this.characters = this.characters.filter((item) => {
+                return (item.status == "Dead")
+            })
         }
     }
 }
