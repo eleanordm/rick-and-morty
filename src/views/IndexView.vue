@@ -48,7 +48,7 @@
                     expand_more
                 </span>
             </div>
-            <div class="button w-48 pl-3 cursor-pointer mt-7" @click="sortAlphabetically()">
+            <div class="button w-48 pl-3 cursor-pointer mt-7" :class="{ active : sortAlphabeticallyActive }" @click="sortAlphabetically()">
                 Alphabetical
                 <span class="material-symbols-outlined pl-1">
                     sort_by_alpha
@@ -105,7 +105,8 @@ export default {
             characters: [],
             showSortModal: false,
             showFilterModal: false,
-            loading: true
+            loading: true,
+            sortAlphabeticallyActive: false
         }
     },
     created: function () {
@@ -123,8 +124,6 @@ export default {
             /* 38 characters in total, removed id's with no image */
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,40,41,42,43,44,45")
             this.characters = rawData.data
-
-            console.log(this.characters)
         },
         toggleSortModal: function () {
             if (this.showSortModal == false) {
@@ -161,6 +160,8 @@ export default {
                 }
                 return 0;
             });
+
+            this.sortAlphabeticallyActive = true
         },
         /* Sort characters by id - ascending */
         sortIdAscending: function () {
@@ -192,4 +193,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/scss/modal.scss";
+
+.active {
+    background-color: #f88fc9;
+}
 </style>
