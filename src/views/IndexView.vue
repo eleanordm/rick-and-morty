@@ -62,19 +62,19 @@
                 <span class="close flex justify-center content-center text-white text-lg font-bold w-8 h-8 rounded-full" @click="closeFilterModal()">&times;</span>
             </div>
             <div class="font-sans text-blue">Filter by</div>
-            <div class="button w-35 pl-3 cursor-pointer mt-7" @click="filterOnlyHumanCharacters()">
+            <div class="button w-35 pl-3 cursor-pointer mt-7" :class="{ active : filterOnlyHumanCharactersActive }" @click="filterOnlyHumanCharacters()">
                 Human
                 <span class="material-symbols-outlined pl-1">
                     person
                 </span>
             </div>
-            <div class="button w-35 pl-3 cursor-pointer mt-7" @click="filterOnlyAliveCharacters()">
+            <div class="button w-35 pl-3 cursor-pointer mt-7" :class="{ active : filterOnlyAliveCharactersActive }" @click="filterOnlyAliveCharacters()">
                 Alive
                 <span class="material-symbols-outlined pl-1">
                     ecg_heart
                 </span>
             </div>
-            <div class="button w-35 pl-3 cursor-pointer mt-7" @click="filterOnlyDeadCharacters()">
+            <div class="button w-35 pl-3 cursor-pointer mt-7" :class="{ active : filterOnlyDeadCharactersActive }" @click="filterOnlyDeadCharacters()">
                 Dead
                 <span class="material-symbols-outlined pl-1">
                     skull
@@ -108,7 +108,10 @@ export default {
             loading: true,
             sortIdAscendingActive: false,
             sortIdDecendingActive: false,
-            sortAlphabeticallyActive: false
+            sortAlphabeticallyActive: false,
+            filterOnlyHumanCharactersActive: false,
+            filterOnlyAliveCharactersActive: false,
+            filterOnlyDeadCharactersActive: false
         }
     },
     created: function () {
@@ -188,16 +191,29 @@ export default {
             this.characters = this.characters.filter((item) => {
                 return (item.species == "Human")
             })
+
+            this.filterOnlyAliveCharactersActive = false
+            this.filterOnlyDeadCharactersActive = false
+            this.filterOnlyHumanCharactersActive = true
         },
         filterOnlyAliveCharacters: function () {
             this.characters = this.characters.filter((item) => {
                 return (item.status == "Alive")
             })
+
+            this.filterOnlyDeadCharactersActive = false
+            this.filterOnlyHumanCharactersActive = false
+            this.filterOnlyAliveCharactersActive = true
         },
         filterOnlyDeadCharacters: function () {
             this.characters = this.characters.filter((item) => {
                 return (item.status == "Dead")
             })
+
+            this.filterOnlyHumanCharactersActive = false
+            this.filterOnlyAliveCharactersActive = false
+            this.filterOnlyDeadCharactersActive = true
+
         }
     }
 }
