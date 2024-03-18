@@ -36,13 +36,13 @@
                 <span class="close flex justify-center content-center text-white text-lg font-bold w-8 h-8 rounded-full" @click="closeSortModal()">&times;</span>
             </div>
             <div class="font-sans text-blue">Sort by</div>
-            <div class="button w-48 pl-3 cursor-pointer mt-7" @click="sortIdAscending()">
+            <div class="button w-48 pl-3 cursor-pointer mt-7" :class="{ active : sortIdAscendingActive }" @click="sortIdAscending()">
                 ID ascending
                 <span class="material-symbols-outlined">
                     expand_less
                 </span>
             </div>
-            <div class="button w-48 pl-3 cursor-pointer mt-7" @click="sortIdDecending()">
+            <div class="button w-48 pl-3 cursor-pointer mt-7" :class="{ active : sortIdDecendingActive }" @click="sortIdDecending()">
                 ID descending
                 <span class="material-symbols-outlined pr-1">
                     expand_more
@@ -106,6 +106,8 @@ export default {
             showSortModal: false,
             showFilterModal: false,
             loading: true,
+            sortIdAscendingActive: false,
+            sortIdDecendingActive: false,
             sortAlphabeticallyActive: false
         }
     },
@@ -161,16 +163,26 @@ export default {
                 return 0;
             });
 
+            this.sortIdDecendingActive = false
+            this.sortIdAscendingActive = false
             this.sortAlphabeticallyActive = true
         },
         /* Sort characters by id - ascending */
         sortIdAscending: function () {
             this.characters.sort((a, b) => a.id - b.id);
+
+            this.sortAlphabeticallyActive = false
+            this.sortIdDecendingActive = false
+            this.sortIdAscendingActive = true
         },
         /* Sort characters by id - decending */
         sortIdDecending: function () {
             this.characters.sort((a, b) => a.id - b.id);
             this.characters.reverse();
+
+            this.sortAlphabeticallyActive = false
+            this.sortIdAscendingActive = false
+            this.sortIdDecendingActive = true
         },
         filterOnlyHumanCharacters: function () {
             this.characters = this.characters.filter((item) => {
