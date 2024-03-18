@@ -14,7 +14,7 @@
                     filter_list
                 </span>
             </div>
-            <div class="button-two button cursor-pointer ml-8">
+            <div class="button-two button cursor-pointer ml-8" @click="getCharacterData()">
                 Clear All
                 <span class="material-symbols-outlined pl-1">
                     clear_all
@@ -103,6 +103,7 @@ export default {
     data: function () {
         return {
             characters: [],
+            originalCharacters: [],
             showSortModal: false,
             showFilterModal: false,
             loading: true,
@@ -129,6 +130,15 @@ export default {
             /* 38 characters in total, removed id's with no image */
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,40,41,42,43,44,45")
             this.characters = rawData.data
+
+            this.originalCharacters = rawData.data
+            this.sortIdAscendingActive = false
+            this.sortIdDecendingActive = false
+            this.sortAlphabeticallyActive = false
+            this.filterOnlyHumanCharactersActive = false
+            this.filterOnlyAliveCharactersActive = false
+            this.filterOnlyDeadCharactersActive = false
+
         },
         toggleSortModal: function () {
             if (this.showSortModal == false) {
