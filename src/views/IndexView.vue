@@ -138,7 +138,6 @@ export default {
             this.filterOnlyHumanCharactersActive = false
             this.filterOnlyAliveCharactersActive = false
             this.filterOnlyDeadCharactersActive = false
-
         },
         toggleSortModal: function () {
             if (this.showSortModal == false) {
@@ -207,6 +206,7 @@ export default {
             this.filterOnlyHumanCharactersActive = true
         },
         filterOnlyAliveCharacters: function () {
+            this.characters = this.originalCharacters
             this.characters = this.characters.filter((item) => {
                 return (item.status == "Alive")
             })
@@ -216,6 +216,7 @@ export default {
             this.filterOnlyAliveCharactersActive = true
         },
         filterOnlyDeadCharacters: function () {
+            this.characters = this.originalCharacters
             this.characters = this.characters.filter((item) => {
                 return (item.status == "Dead")
             })
@@ -223,7 +224,6 @@ export default {
             this.filterOnlyHumanCharactersActive = false
             this.filterOnlyAliveCharactersActive = false
             this.filterOnlyDeadCharactersActive = true
-
         }
     }
 }
