@@ -1,6 +1,6 @@
 <template>
 <div class="flex justify-center items-center text-white">
-Character view
+    Character view
 </div>
 </template>
 
