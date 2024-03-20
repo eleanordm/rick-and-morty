@@ -5,13 +5,13 @@
     </router-link>
     <div class="router-links flex">
         <div>
-            <router-link class="router" to="/">About</router-link>
+            <router-link class="router font-sans text-blue text-xs" to="/">About</router-link>
         </div>
         <div class="ml-3">
-            <router-link class="router" to="/search">Search</router-link>
+            <router-link class="router font-sans text-blue text-xs" to="/search">Search</router-link>
         </div>
         <div class="ml-3">
-            <router-link class="router" to="/index">Index</router-link>
+            <router-link class="router font-sans text-blue text-xs" to="/index">Index</router-link>
         </div>
     </div>
 </nav>
@@ -24,22 +24,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 /* 
     Specific styling for about, search and index router links
     Originally (a)
     Changed to .router to amend the styling to the linked logo
 */
 .router {
-    color: #618EFF;
-    font-family: 'Zen Dots';
-    text-decoration: none;
-    font-size: 12px;
-
     // scss to change the colour of a button once active.
     &.router-link-exact-active {
         color: #2755c7;
     }
 }
-
 </style>
