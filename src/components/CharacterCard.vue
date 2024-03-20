@@ -1,9 +1,11 @@
 <template>
 <div class="character-card text-center cursor-pointer relative m-3">
-    <img :src="image" class="w-[200px] h-[260px] p-[3px] object-cover duration-300 rounded-3xl mb-[25px]">
-    <div class="overlay flex justify-center items-center absolute inset-0 opacity-0 container text-white text-center duration-500 rounded-3xl mb-[25px]">
-        <h2 class="font-sans">{{ name }}</h2>
-    </div>
+    <router-link to="/character">
+        <img :src="image" class="w-[200px] h-[260px] p-[3px] object-cover duration-300 rounded-3xl mb-[25px]">
+        <div class="overlay flex justify-center items-center absolute inset-0 opacity-0 container text-white text-center duration-500 rounded-3xl mb-[25px]">
+            <h2 class="font-sans">{{ name }}</h2>
+        </div>
+    </router-link>
 </div>
 </template>
 
