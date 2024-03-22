@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="flex flex-row flex-wrap justify-center mx-32" v-if="loading == false">
-        <character-card v-for="character in characters" :key="character" :image="character.image" :name="character.name">
+        <character-card v-for="character in characters" :key="character" :image="character.image" :name="character.name" :id="character.id">
         </character-card>
     </div>
     <div class="flex flex-row flex-wrap justify-center mx-32" v-if="loading == true">
