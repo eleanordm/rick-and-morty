@@ -23,7 +23,6 @@ export default {
         this.getCharacterId()
     },
     methods: {
-        /* */
         getCharacterId: async function () {
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/" + this.$route.query.id)
             this.character = rawData.data

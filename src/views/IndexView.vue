@@ -90,7 +90,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import CharacterCard from '../components/CharacterCard.vue'
 import CharacterCardSkeleton from '../components/CharacterCardSkeleton.vue'
 
-/* Pauses all functions until function with axios & await is fullfilled */
+// Pauses all functions until function with axios & await is fullfilled
 import axios from 'axios'
 
 export default {
@@ -116,18 +116,18 @@ export default {
         }
     },
     created: function () {
-        /* Short timeout added to show skeleton loading */
+        // Short timeout added to show skeleton loading
         setTimeout(() => {
             this.loading = false
         }, 300)
 
-        /* Gets character data on page load */
+        // Gets character data on page load */
         this.getCharacterData()
     },
     methods: {
-        /* Gets all character data */
+        // Gets all character data 
         getCharacterData: async function () {
-            /* 38 characters in total, removed id's with no image */
+            // 38 characters in total, removed id's with no image
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,40,41,42,43,44,45")
             this.characters = rawData.data
 
@@ -163,7 +163,7 @@ export default {
         closeFilterModal: function () {
             this.showFilterModal = false
         },
-        /* Sort characters alphabetically */
+        // Sort characters alphabetically 
         sortAlphabetically: function () {
             this.characters.sort(function (a, b) {
                 if (a.name < b.name) {
@@ -179,7 +179,7 @@ export default {
             this.sortIdAscendingActive = false
             this.sortAlphabeticallyActive = true
         },
-        /* Sort characters by id - ascending */
+        // Sort characters by id - ascending 
         sortIdAscending: function () {
             this.characters.sort((a, b) => a.id - b.id);
 
@@ -187,7 +187,7 @@ export default {
             this.sortIdDecendingActive = false
             this.sortIdAscendingActive = true
         },
-        /* Sort characters by id - decending */
+        // Sort characters by id - decending
         sortIdDecending: function () {
             this.characters.sort((a, b) => a.id - b.id);
             this.characters.reverse();
