@@ -24,12 +24,13 @@ const routes = [
     path: '/character',
     name: 'character',
     component: CharacterView
-  }
+  },
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes
+  
 })
 
 export default router

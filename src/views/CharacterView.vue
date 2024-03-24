@@ -1,6 +1,7 @@
 <template>
 <div>
-    {{ characterId }}
+    <img :src="character.image">
+    {{ character.name }}
 </div>
 </template>
 
@@ -15,16 +16,17 @@ export default {
     },
     data: function () {
         return {
-            characterId: []
+            character: {},
         }
     },
     created: function () {
         this.getCharacterId()
     },
     methods: {
+        /* */
         getCharacterId: async function () {
-            var rawData = await axios.get("https://rickandmortyapi.com/api/character/1")
-            this.characterId = rawData.data
+            var rawData = await axios.get("https://rickandmortyapi.com/api/character/" + this.$route.query.id)
+            this.character = rawData.data
         }
     }
 }
