@@ -2,7 +2,7 @@
 <div>
     <body>
         <div class="page-container relative min-h-screen">
-            <div class="content-wrap min-h-screen pb-14">
+            <div class="page content-wrap min-h-screen pb-14">
                 <nav-bar></nav-bar>
                 <router-view></router-view>
             </div>

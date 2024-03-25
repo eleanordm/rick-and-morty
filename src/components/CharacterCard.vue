@@ -18,7 +18,7 @@ export default {
         image: String,
         name: String,
         id: Number
-    },
+    }
 }
 </script>
 
