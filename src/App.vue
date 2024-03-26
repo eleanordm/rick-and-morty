@@ -1,6 +1,7 @@
 <template>
 <div>
     <body>
+        <background-animation></background-animation>
         <div class="page-container relative min-h-screen">
             <div class="page content-wrap min-h-screen pb-14">
                 <nav-bar></nav-bar>
@@ -15,12 +16,14 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import WebsiteFooter from '@/components/WebsiteFooter.vue'
+import BackgroundAnimation from './components/BackgroundAnimation.vue'
 
 export default {
     name: 'App',
     components: {
         NavBar,
-        WebsiteFooter
+        WebsiteFooter,
+        BackgroundAnimation
     }
 }
 </script>
@@ -36,7 +39,6 @@ export default {
 }
 
 body {
-    margin: 0px;
     background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgb(13, 13, 38) 60%);
 }
 </style>
