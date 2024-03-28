@@ -1,26 +1,38 @@
 <template>
 <div>
     <div class="flex justify-center mt-36">
-        <div class="box">
+        <div class="id-card">
             <div class="flex flex-col">
-                <div class="flex text-pink justify-center font-sans text-2xl w-[500px] h-[40px] items-center mt-1">
+                <div class="card flex text-[#272727] bg-green justify-center font-sans text-2xl items-center pt-3 pb-2">
                     Identification Card
                 </div>
                 <div class="flex">
-                    <img class="w-[200px] h-[220px] rounded-md m-3 object-cover" :src="character.image">
-                    <div class="font-sans text-beige m-4">
-                        <div class="mb-3 text-xl"> 
-                            ID Number: {{ character.id }} 
+                    <div class="img-container">
+                        <img class="w-[190px] h-[220px] rounded-md m-2 object-cover border-[3px] border-[#272727]" :src="character.image">
+                        <div class="alive">Alive</div>
+                    </div>
+                    <div class="font-sans text-[#272727] w-[250px]">
+                        <div class="flex justify-end">
+                            <div class="m-3 text-base">
+                                ID: {{ character.id }}
+                            </div>
                         </div>
-                        <div class="mb-2 text-xl"> 
-                            Name: {{ character.name }}
+                        <div class="flex flex-col m-[5px] h-[130px]">
+                            <div class="flex flex-row">
+                                <div class="text-blue text-base"> {{ character.name }}</div>
+                            </div>
+                            <div class="flex flex-row"> Gender: <div class="text-[#272727] ml-1 text-base"> {{ character.gender }}</div>
+                            </div>
+                            <div class="flex flex-row"> Species: <div class="text-[#272727]] ml-1 text-base"> {{ character.species }}</div>
+                            </div>
+                            <div class="flex flex-row"> Origin: <div class="text-[#272727] ml-1 text-base"> {{ character.origin.name }}</div>
+                            </div>
                         </div>
-                        <div> Gender: {{ character.gender }} </div>
-                        <div> Species: {{ character.species }} </div>
-                        <div> Status: {{ character.status }} </div>
+                        <div class="flex justify-center">
+                            <img src="../assets/barcode.png" class="barcode">
+                        </div>
                     </div>
                 </div>
-                <div class="flex justify-center font-sans text-2xl w-[500px] h-[20px] items-center rounded-md rounded-tl-none rounded-tr-none"></div>
             </div>
         </div>
     </div>
@@ -43,8 +55,6 @@ export default {
     },
     created: function () {
         this.getCharacterId()
-
-        console.log(this.getCharacterId)
     },
     methods: {
         getCharacterId: async function () {
@@ -56,14 +66,15 @@ export default {
 </script>
 
 <style lang="scss">
-.box {
-    border: 1px solid #ffffff22;
-    background-color: #282c34;
-    background: linear-gradient(0deg, rgb(51, 40, 52) 0%, rgba(17, 0, 32, .5) 100%);
+// id card animation and styling
+.id-card {
+    border: 4px solid #618EFF;
+    background-color: rgba(238, 236, 236, 0.915);
     box-shadow: 0 7px 20px 5px #00000046;
     border-radius: .7rem;
     overflow: hidden;
     transition: .5s all;
+    max-height: 300px;
 
     ::before {
         position: fixed;
@@ -77,7 +88,7 @@ export default {
     }
 
     &:hover {
-        border: 1px solid #ffffff44;
+        border: 4px solid #618EFF;
         box-shadow: 0 7px 50px 5px #00000075;
         transform: scale(1.015);
 
@@ -86,6 +97,31 @@ export default {
             top: -100%;
             left: 200%;
         }
+    }
+}
+
+.card {
+    border-bottom: 4px solid #618EFF;
+}
+
+.barcode {
+    width: 200px;
+    height: 25px
+}
+
+.img-container {
+    position: relative;
+    text-align: center;
+
+    .alive {
+        position: absolute;
+        bottom: 17px;
+        left: 10px;
+        right: 10px;
+        font-family: "Zen Dots";
+        background-color: #36b402;
+        color: white;
+        opacity: 78%;
     }
 }
 </style>
