@@ -9,7 +9,9 @@
                 <div class="flex">
                     <div class="img-container">
                         <img class="w-[190px] h-[220px] rounded-md m-2 object-cover border-[3px] border-[#272727]" :src="character.image">
-                        <div class="alive">Alive</div>
+                        <div class="alive" v-if="character.status == 'Alive'">Alive</div>
+                        <div class="dead" v-if="character.status == 'Dead'">Dead</div>
+                        <div class="missing" v-if="character.status == 'unknown'">Missing</div>
                     </div>
                     <div class="font-sans text-[#272727] w-[250px]">
                         <div class="flex justify-end">
@@ -51,6 +53,9 @@ export default {
     data: function () {
         return {
             character: {},
+            alive: false,
+            dead: false,
+            missing: false
         }
     },
     created: function () {
@@ -60,7 +65,7 @@ export default {
         getCharacterId: async function () {
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/" + this.$route.query.id)
             this.character = rawData.data
-        }
+        },
     }
 }
 </script>
@@ -120,6 +125,26 @@ export default {
         right: 10px;
         font-family: "Zen Dots";
         background-color: #36b402;
+        color: white;
+        opacity: 78%;
+    }
+    .dead {
+        position: absolute;
+        bottom: 17px;
+        left: 10px;
+        right: 10px;
+        font-family: "Zen Dots";
+        background-color: #d80505;
+        color: white;
+        opacity: 78%;
+    }
+    .missing {
+        position: absolute;
+        bottom: 17px;
+        left: 10px;
+        right: 10px;
+        font-family: "Zen Dots";
+        background-color: #7c7c7c;
         color: white;
         opacity: 78%;
     }
