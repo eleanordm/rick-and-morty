@@ -3,23 +3,23 @@
     <div class="flex justify-center mt-36">
         <div class="id-card">
             <div class="flex flex-col">
-                <div class="card flex text-[#272727] bg-green justify-center font-sans text-2xl items-center pt-3 pb-2">
+                <div class="border-b-[4px] border-[#618EFF] flex text-[#272727] bg-green justify-center font-sans text-2xl items-center pt-3 pb-2">
                     Identification Card
                 </div>
                 <div class="flex">
-                    <div class="img-container">
+                    <div class="relative text-center">
                         <img class="w-[190px] h-[220px] rounded-md m-2 object-cover border-[3px] border-[#272727]" :src="character.image">
-                        <div class="alive" v-if="character.status == 'Alive'">Alive</div>
-                        <div class="dead" v-if="character.status == 'Dead'">Dead</div>
-                        <div class="missing" v-if="character.status == 'unknown'">Missing</div>
+                        <div class="font-sans absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#36b402]" v-if="character.status == 'Alive'">Alive</div>
+                        <div class="font-sans absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#d80505]" v-if="character.status == 'Dead'">Dead</div>
+                        <div class="font-sans absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#7c7c7c]" v-if="character.status == 'unknown'">Missing</div>
                     </div>
                     <div class="font-sans text-[#272727] w-[250px]">
                         <div class="flex justify-end">
-                            <div class="m-3 text-base">
+                            <div class="m-2 text-base">
                                 ID: {{ character.id }}
                             </div>
                         </div>
-                        <div class="flex flex-col m-[5px] h-[130px]">
+                        <div class="flex flex-col mx-2">
                             <div class="flex flex-row">
                                 <div class="text-blue text-base"> {{ character.name }}</div>
                             </div>
@@ -30,8 +30,8 @@
                             <div class="flex flex-row"> Origin: <div class="text-[#272727] ml-1 text-base"> {{ character.origin.name }}</div>
                             </div>
                         </div>
-                        <div class="flex justify-center">
-                            <img src="../assets/barcode.png" class="barcode">
+                        <div class="flex justify-center mt-[15px]">
+                            <img src="../assets/barcode.png" class="w-[200px] h-[25px]">
                         </div>
                     </div>
                 </div>
@@ -102,51 +102,6 @@ export default {
             top: -100%;
             left: 200%;
         }
-    }
-}
-
-.card {
-    border-bottom: 4px solid #618EFF;
-}
-
-.barcode {
-    width: 200px;
-    height: 25px
-}
-
-.img-container {
-    position: relative;
-    text-align: center;
-
-    .alive {
-        position: absolute;
-        bottom: 17px;
-        left: 10px;
-        right: 10px;
-        font-family: "Zen Dots";
-        background-color: #36b402;
-        color: white;
-        opacity: 78%;
-    }
-    .dead {
-        position: absolute;
-        bottom: 17px;
-        left: 10px;
-        right: 10px;
-        font-family: "Zen Dots";
-        background-color: #d80505;
-        color: white;
-        opacity: 78%;
-    }
-    .missing {
-        position: absolute;
-        bottom: 17px;
-        left: 10px;
-        right: 10px;
-        font-family: "Zen Dots";
-        background-color: #7c7c7c;
-        color: white;
-        opacity: 78%;
     }
 }
 </style>
