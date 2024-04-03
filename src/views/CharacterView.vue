@@ -38,17 +38,20 @@
             </div>
         </div>
     </div>
+    <id-card-skeleton></id-card-skeleton>
 </div>
 </template>
 
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
 import axios from 'axios'
+import IdCardSkeleton from '../components/IdCardSkeleton.vue'
 
 export default {
     name: 'CharacterView',
     components: {
         HelloWorld,
+        IdCardSkeleton
     },
     data: function () {
         return {
@@ -71,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss">
-// id card animation and styling
+// id card animation styling
 .id-card {
     border: 4px solid #618EFF;
     background-color: rgba(238, 236, 236, 0.915);
