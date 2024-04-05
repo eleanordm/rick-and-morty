@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="flex justify-center mt-36">
+    <div class="flex justify-center mt-36" v-if="loading == false">
         <div class="id-card">
             <div class="flex flex-col">
                 <div class="border-b-[4px] border-[#618EFF] flex text-[#272727] bg-green justify-center font-sans text-2xl items-center pt-3 pb-2">
@@ -38,7 +38,9 @@
             </div>
         </div>
     </div>
-    <id-card-skeleton></id-card-skeleton>
+    <div v-if="loading == true">
+        <id-card-skeleton></id-card-skeleton>
+    </div>
 </div>
 </template>
 
@@ -58,10 +60,14 @@ export default {
             character: {},
             alive: false,
             dead: false,
-            missing: false
+            missing: false,
+            loading: true
         }
     },
     created: function () {
+        setTimeout(() => {
+            this.loading = false
+        }, 300)        
         this.getCharacterId()
     },
     methods: {
