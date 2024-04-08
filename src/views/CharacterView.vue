@@ -64,16 +64,15 @@ export default {
             loading: true
         }
     },
-    created: function () {
-        setTimeout(() => {
-            this.loading = false
-        }, 300)        
+    created: function () {      
         this.getCharacterId()
     },
     methods: {
         getCharacterId: async function () {
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/" + this.$route.query.id)
             this.character = rawData.data
+
+            this.loading = false
         },
     }
 }

@@ -3,7 +3,7 @@
     <div class="flex justify-center mt-36">
         <div class="bg-[#333337] rounded-lg border-[4px] border-[#333337]">
             <div class="flex flex-col items-center">
-                <div class="darkui2-shimmer bg-[#f0f0f0] h-[30px] w-[300px] rounded-sm mt-[20px] mb-[15px]">
+                <div class="darkui2-shimmer bg-[#f0f0f0] h-[35px] w-[300px] rounded-sm mt-[10px] mb-[10px]">
                 </div>
                 <div class="flex">
                     <div>
@@ -40,7 +40,7 @@ export default {
   -webkit-animation-name: placeHolderShimmer;
   -webkit-animation-timing-function: linear;
   background: #50535a;
-  background-image: linear-gradient(to right, #2b2c31ae 0%, #25262ca7 20%, #16181b 40%, #15171a96 100%);
+  background-image: linear-gradient(to right, #50535a65 0%, #6568718e 20%, #50535a79 40%, #50535a7d 100%);
   background-repeat: no-repeat;
   background-size: 800px 104px;
   position: relative
