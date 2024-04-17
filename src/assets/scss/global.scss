@@ -1,5 +1,5 @@
 .button {
-    @apply bg-pink text-blue font-sans flex justify-center items-center text-[15px] rounded-full w-[160px] h-[35px] ;
+    @apply bg-pink text-blue font-sans flex justify-center items-center text-[15px] rounded-full w-[160px] h-[35px] hover:bg-[#f69acc] delay-75;
 }
 
 .footer {
