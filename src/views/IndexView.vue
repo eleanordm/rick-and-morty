@@ -120,7 +120,7 @@ export default {
         setTimeout(() => {
             this.loading = false
         }, 300)
-
+        
         // Gets character data on page load */
         this.getCharacterData()
     },

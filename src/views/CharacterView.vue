@@ -64,7 +64,7 @@ export default {
             loading: true
         }
     },
-    created: function () {      
+    created: function () {
         this.getCharacterId()
     },
     methods: {
