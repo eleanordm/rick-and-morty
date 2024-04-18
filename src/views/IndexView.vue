@@ -115,12 +115,7 @@ export default {
             filterOnlyDeadCharactersActive: false
         }
     },
-    created: function () {
-        // Short timeout added to show skeleton loading
-        setTimeout(() => {
-            this.loading = false
-        }, 300)
-        
+    created: function () {        
         // Gets character data on page load */
         this.getCharacterData()
     },
@@ -138,6 +133,8 @@ export default {
             this.filterOnlyHumanCharactersActive = false
             this.filterOnlyAliveCharactersActive = false
             this.filterOnlyDeadCharactersActive = false
+
+            this.loading = false
         },
         toggleSortModal: function () {
             if (this.showSortModal == false) {
