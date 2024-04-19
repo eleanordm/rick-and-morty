@@ -19,19 +19,20 @@
                                 ID: {{ character.id }}
                             </div>
                         </div>
-                        <div class="flex flex-col mx-2">
-                            <div class="flex flex-row">
-                                <div class="text-blue text-base"> {{ character.name }}</div>
+                        <div class="flex flex-col h-[190px] justify-between">
+                            <div class="mx-3">
+                                <div class="flex flex-row">
+                                    <div class="text-blue text-lg"> {{ character.name }}</div>
+                                </div>
+                                <div class="flex flex-col text-[#272727] text-sm">
+                                    <div> Gender: {{ character.gender }} </div>
+                                    <div> Species: {{ character.species }} </div>
+                                    <div> Origin: {{ character.origin.name }} </div>
+                                </div>
                             </div>
-                            <div class="flex flex-row"> Gender: <div class="text-[#272727] ml-1 text-base"> {{ character.gender }}</div>
+                            <div class="flex justify-center">
+                                <img src="../assets/barcode.png" class="w-[200px] h-[25px] mb-[10px]">
                             </div>
-                            <div class="flex flex-row"> Species: <div class="text-[#272727]] ml-1 text-base"> {{ character.species }}</div>
-                            </div>
-                            <div class="flex flex-row"> Origin: <div class="text-[#272727] ml-1 text-base"> {{ character.origin.name }}</div>
-                            </div>
-                        </div>
-                        <div class="flex justify-center mt-[15px]">
-                            <img src="../assets/barcode.png" class="w-[200px] h-[25px]">
                         </div>
                     </div>
                 </div>
