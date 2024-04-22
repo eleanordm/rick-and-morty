@@ -14,6 +14,10 @@
         <character-card v-for="character in characters" :key="character" :image="character.image" :name="character.name" :id="character.id">
         </character-card>
     </div>
+    <div v-if="!characterNotFound"></div>
+    <div v-else>
+        <div class="text-beige text-center font-sans">Character not found</div>
+    </div>
     <div class="flex flex-row flex-wrap justify-center mx-32" v-if="loading == true">
         <character-card-skeleton></character-card-skeleton>
     </div>
@@ -37,16 +41,31 @@ export default {
         return {
             characters: [],
             name: "",
-            loading: false
+            loading: false,
+            characterNotFound: false
         }
     },
     created: function () {
+
     },
     methods: {
         getAllCharacters: async function () {
             this.loading = true
-            var rawData = await axios.get("https://rickandmortyapi.com/api/character/?name=" + this.name)
-            this.characters = rawData.data.results
+
+            try {
+                var rawData = await axios.get("https://rickandmortyapi.com/api/character/?name=" + this.name);
+                this.characters = rawData.data.results;
+                this.characterNotFound = false;
+            } catch (error) {
+                if (error.response && error.response.status === 404) {
+
+                    console.error("Character not found");
+                    this.characters = [];
+                    this.characterNotFound = true;
+                } else {
+                    console.error("Error:", error.message);
+                }
+            }
 
             this.loading = false
         },
