@@ -51,7 +51,7 @@ import axios from 'axios'
 import IdCardSkeleton from '../components/IdCardSkeleton.vue'
 
 export default {
-    name: 'CharacterView',
+    name: 'CharacterIdView',
     components: {
         HelloWorld,
         IdCardSkeleton

@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import AboutView from '../views/AboutView.vue'
 import SearchView from '../views/SearchView.vue'
 import IndexView from '../views/IndexView.vue'
-import CharacterView from '../views/CharacterView.vue'
+import CharacterIdView from '../views/CharacterIdView.vue'
 
 const routes = [
   {
@@ -23,7 +23,7 @@ const routes = [
   {
     path: '/character',
     name: 'character',
-    component: CharacterView
+    component: CharacterIdView
   },
 ]
 
