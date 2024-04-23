@@ -2,7 +2,7 @@
 <div>
     <div class="flex justify-center">
         <div class="flex justify-center mt-20 mb-10 max-w-full items-center bg-pink h-[40px] w-[300px] rounded-full pl-[10px]">
-            <input type="text" placeholder="Search characters" v-model="name" class="placeholder-white focus:placeholder-transparent text-white outline-none bg-pink font-sans">
+            <input type="text" placeholder="Search characters" v-model="name" @keydown.enter="getAllCharacters()" class="placeholder-white focus:placeholder-transparent text-white outline-none bg-pink font-sans">
             <div class="cursor-pointer h-[30px] w-[30px] border-white border-2 rounded-full" @click="getAllCharacters()">
                 <span class="material-symbols-outlined mt-[3px] ml-[3px] text-[20px] text-white">
                     search
@@ -58,8 +58,6 @@ export default {
                 this.characterNotFound = false;
             } catch (error) {
                 if (error.response && error.response.status === 404) {
-
-                    console.error("Character not found");
                     this.characters = [];
                     this.characterNotFound = true;
                 } else {
