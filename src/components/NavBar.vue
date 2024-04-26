@@ -5,7 +5,7 @@
     </router-link>
     <div class="router-links flex">
         <div>
-            <router-link class="router font-sans text-blue text-xs" to="/">About</router-link>
+            <router-link class="router font-sans text-blue text-xs" to="/about">About</router-link>
         </div>
         <div class="ml-3">
             <router-link class="router font-sans text-blue text-xs" to="/search">Search</router-link>

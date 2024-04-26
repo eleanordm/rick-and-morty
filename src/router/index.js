@@ -6,34 +6,50 @@ import CharacterIdView from '../views/CharacterIdView.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/about',
     name: 'about',
-    component: AboutView
+    component: AboutView,
+    meta: {
+      title:'About'
+    }
   },
   {
     path: '/search',
     name: 'search',
-    component: SearchView
+    component: SearchView,
+    meta: {
+      title:'Search'
+    }
   },
   {
     path: '/index',
     name: 'index',
-    component: IndexView
+    component: IndexView,
+    meta: {
+      title:'Index'
+    }
   },
   {
     path: '/character',
     name: 'character',
-    component: CharacterIdView
+    component: CharacterIdView,
+    meta: {
+      title:'Character'
+    }
   },
 ]
 
 const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
-    // always scroll to the top of the page
+    // when a character card is clicked, the ID card page will load and automatically scroll to the top of the page
     return { top: 0 }
   },
   history: createWebHashHistory(),
   routes
 })
 
+router.beforeEach((to, from) => {
+  document.title = to.meta?.title ?? 'Rick and Morty'
+  
+})
 export default router

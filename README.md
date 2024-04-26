@@ -1,4 +1,4 @@
-# feb-project
+# rick-and-morty
 
 ## Project setup
 ```
