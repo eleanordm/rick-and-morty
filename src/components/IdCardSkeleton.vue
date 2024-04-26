@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 
-// skeleton shimmer animation
+// Skeleton shimmer animation
 .darkui2-shimmer {
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;

@@ -10,7 +10,7 @@ const routes = [
     name: 'about',
     component: AboutView,
     meta: {
-      title:'About'
+      title: 'About'
     }
   },
   {
@@ -18,7 +18,7 @@ const routes = [
     name: 'search',
     component: SearchView,
     meta: {
-      title:'Search'
+      title: 'Search'
     }
   },
   {
@@ -26,7 +26,7 @@ const routes = [
     name: 'index',
     component: IndexView,
     meta: {
-      title:'Index'
+      title: 'Index'
     }
   },
   {
@@ -34,22 +34,23 @@ const routes = [
     name: 'character',
     component: CharacterIdView,
     meta: {
-      title:'Character'
+      title: 'Character'
     }
   },
 ]
 
 const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
-    // when a character card is clicked, the ID card page will load and automatically scroll to the top of the page
+    // When a character card is clicked, the ID card page will load and automatically scroll to the top of the page
     return { top: 0 }
   },
   history: createWebHashHistory(),
   routes
 })
 
+// Changes the title of a page, or sets a default title if unknown
 router.beforeEach((to, from) => {
   document.title = to.meta?.title ?? 'Rick and Morty'
-  
 })
+
 export default router

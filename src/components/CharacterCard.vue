@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// index character card styling
+// Index character card styling
 .character-card {
     .overlay {
         background: rgba(0, 0, 0, 0.315);
