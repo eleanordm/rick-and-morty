@@ -30,7 +30,7 @@ export default {
     Changed to .router to amend the styling to the linked logo
 */
 .router {
-    // SCSS to change the colour of a button once active.
+    // CSS to change the colour of active nav bar links.
     &.router-link-exact-active {
         color: #2755c7;
     }

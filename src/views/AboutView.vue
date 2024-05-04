@@ -11,16 +11,16 @@
             Placeholder text, placeholder text
         </div>
         <div class="font-sans text-beige text-md mt-8 w-[600px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
         </div>
         <div class="mt-8 flex flex-row">
-        <div class="button mr-4">
-            LinkedIn
+            <a href="https://www.linkedin.com/in/eleanor-davis-mullen-66596519a/" class="button mr-4">
+                LinkedIn
+            </a>
+            <a href="mailto:eleanordm83@gmail.com" class="button">
+                Email
+            </a>
         </div>
-        <div class="button">
-            Email
-        </div>
-    </div>
     </div>
 </div>
 </template>
