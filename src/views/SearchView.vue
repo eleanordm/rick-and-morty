@@ -2,9 +2,9 @@
 <div>
     <div class="flex justify-center">
         <div class="flex justify-center mt-20 mb-10 max-w-full items-center bg-pink h-[40px] w-[300px] rounded-full pl-[10px]">
-            <input type="text" placeholder="Search characters" v-model="name" @keydown.enter="getAllCharacters()" class="placeholder-white focus:placeholder-transparent text-white outline-none bg-pink font-sans">
-            <div class="cursor-pointer h-[30px] w-[30px] border-white border-2 rounded-full" @click="getAllCharacters()">
-                <span class="material-symbols-outlined mt-[3px] ml-[3px] text-[20px] text-white">
+            <input type="text" placeholder="Search characters" v-model="name" @keydown.enter="getAllCharacters()" class="placeholder-blue focus:placeholder-transparent text-blue outline-none bg-pink font-sans">
+            <div class="cursor-pointer h-[30px] w-[30px] border-blue border-2 rounded-full" @click="getAllCharacters()">
+                <span class="material-symbols-outlined mt-[3px] ml-[3px] text-[20px] text-blue">
                     search
                 </span>
             </div>

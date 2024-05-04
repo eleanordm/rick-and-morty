@@ -89,8 +89,6 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import CharacterCard from '../components/CharacterCard.vue'
 import CharacterCardSkeleton from '../components/CharacterCardSkeleton.vue'
-
-// Pauses all functions until function with axios & await is fullfilled
 import axios from 'axios'
 
 export default {
@@ -116,7 +114,7 @@ export default {
         }
     },
     created: function () {        
-        // Gets character data on page load */
+        // Gets character data on page load
         this.getCharacterData()
     },
     methods: {
