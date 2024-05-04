@@ -1,20 +1,20 @@
 <template>
 <div>
-    <div class="m-8 flex flex-col items-center">
+    <div class="mx-8 mb-8 mt-16 flex flex-col items-center">
         <div class="flex flex-row">
-            <div class="button cursor-pointer" @click="toggleSortModal()">
+            <div class="button" @click="toggleSortModal()">
                 Sort
                 <span class="material-symbols-outlined pl-1">
                     sort
                 </span>
             </div>
-            <div class="button cursor-pointer ml-8" @click="toggleFilterModal()">
+            <div class="button ml-8" @click="toggleFilterModal()">
                 Filter
                 <span class="material-symbols-outlined pl-1">
                     filter_list
                 </span>
             </div>
-            <div class="button-two button cursor-pointer ml-8" @click="getCharacterData()">
+            <div class="button-two button ml-8" @click="getCharacterData()">
                 Clear All
                 <span class="material-symbols-outlined pl-1">
                     clear_all
@@ -36,19 +36,19 @@
                 <span class="close flex justify-center content-center text-white text-lg font-bold w-8 h-8 rounded-full" @click="closeSortModal()">&times;</span>
             </div>
             <div class="font-sans text-blue">Sort by</div>
-            <div class="button w-48 pl-3 cursor-pointer mt-7" :class="{ active : sortIdAscendingActive }" @click="sortIdAscending()">
+            <div class="button w-48 pl-3 mt-7" :class="{ active : sortIdAscendingActive }" @click="sortIdAscending()">
                 ID ascending
                 <span class="material-symbols-outlined">
                     expand_less
                 </span>
             </div>
-            <div class="button w-48 pl-3 cursor-pointer mt-7" :class="{ active : sortIdDecendingActive }" @click="sortIdDecending()">
+            <div class="button w-48 pl-3 mt-7" :class="{ active : sortIdDecendingActive }" @click="sortIdDecending()">
                 ID descending
                 <span class="material-symbols-outlined pr-1">
                     expand_more
                 </span>
             </div>
-            <div class="button w-48 pl-3 cursor-pointer mt-7" :class="{ active : sortAlphabeticallyActive }" @click="sortAlphabetically()">
+            <div class="button w-48 pl-3 mt-7" :class="{ active : sortAlphabeticallyActive }" @click="sortAlphabetically()">
                 Alphabetical
                 <span class="material-symbols-outlined pl-1">
                     sort_by_alpha
@@ -62,19 +62,19 @@
                 <span class="close flex justify-center content-center text-white text-lg font-bold w-8 h-8 rounded-full" @click="closeFilterModal()">&times;</span>
             </div>
             <div class="font-sans text-blue">Filter by</div>
-            <div class="button w-35 pl-3 cursor-pointer mt-7" :class="{ active : filterOnlyHumanCharactersActive }" @click="filterOnlyHumanCharacters()">
+            <div class="button w-35 pl-3 mt-7" :class="{ active : filterOnlyHumanCharactersActive }" @click="filterOnlyHumanCharacters()">
                 Human
                 <span class="material-symbols-outlined pl-1">
                     person
                 </span>
             </div>
-            <div class="button w-35 pl-3 cursor-pointer mt-7" :class="{ active : filterOnlyAliveCharactersActive }" @click="filterOnlyAliveCharacters()">
+            <div class="button w-35 pl-3 mt-7" :class="{ active : filterOnlyAliveCharactersActive }" @click="filterOnlyAliveCharacters()">
                 Alive
                 <span class="material-symbols-outlined pl-1">
                     ecg_heart
                 </span>
             </div>
-            <div class="button w-35 pl-3 cursor-pointer mt-7" :class="{ active : filterOnlyDeadCharactersActive }" @click="filterOnlyDeadCharacters()">
+            <div class="button w-35 pl-3 mt-7" :class="{ active : filterOnlyDeadCharactersActive }" @click="filterOnlyDeadCharacters()">
                 Dead
                 <span class="material-symbols-outlined pl-1">
                     skull
