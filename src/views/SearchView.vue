@@ -25,7 +25,6 @@
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
 import CharacterCard from '@/components/CharacterCard.vue'
 import CharacterCardSkeleton from '@/components/CharacterCardSkeleton.vue'
 import axios from 'axios'
@@ -33,7 +32,6 @@ import axios from 'axios'
 export default {
     name: 'SearchView',
     components: {
-        HelloWorld,
         CharacterCard,
         CharacterCardSkeleton
     },

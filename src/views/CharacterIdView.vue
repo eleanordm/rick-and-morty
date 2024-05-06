@@ -46,14 +46,12 @@
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
 import axios from 'axios'
 import IdCardSkeleton from '../components/IdCardSkeleton.vue'
 
 export default {
     name: 'CharacterIdView',
     components: {
-        HelloWorld,
         IdCardSkeleton
     },
     data: function () {
