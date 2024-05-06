@@ -21,6 +21,7 @@ module.exports = {
       // Main font across all pages
       fontFamily: {
         sans: ['Zen Dots', 'sans-serif'],
+        footer: ['Ubuntu Sans Mono']
       },
     },
   },

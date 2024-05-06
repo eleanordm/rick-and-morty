@@ -5,20 +5,23 @@
             Hi there, my name is
         </div>
         <div class="font-sans text-pink text-6xl mt-5">
-            Eleanor Davis Mullen.
+            Eleanor Davis Mullen
         </div>
         <div class="font-sans text-[#f9bfdf] text-4xl mt-2 opacity-90">
-            Placeholder text, placeholder text
+            Junior Software Developer
         </div>
         <div class="font-sans text-beige text-md mt-8 w-[600px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+            Specialising in reactive frameworks like Vue.js, reinforced by expertise in HTML, CSS, JavaScript, and Tailwind.
         </div>
         <div class="mt-8 flex flex-row">
-            <a href="https://www.linkedin.com/in/eleanor-davis-mullen-66596519a/" class="button mr-4">
+            <a href="https://www.linkedin.com/in/eleanor-davis-mullen-66596519a/" target="_blank" class="button mr-4">
                 LinkedIn
             </a>
             <a href="mailto:eleanordm83@gmail.com" class="button">
                 Email
+            </a>
+            <a href="https://github.com/eleanordm/rick-and-morty" target="_blank" class="button ml-4">
+                Github
             </a>
         </div>
     </div>
