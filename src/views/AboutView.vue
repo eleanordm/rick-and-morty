@@ -1,16 +1,16 @@
 <template>
 <div class="mt-40 flex justify-center">
     <div class="flex flex-col w-[1000px] text-left">
-        <div class="font-sans text-blue text-sm">
+        <div class="font-zen text-blue text-sm">
             Hi there, my name is
         </div>
-        <div class="font-sans text-pink text-6xl mt-5">
+        <div class="font-zen text-pink text-6xl mt-5">
             Eleanor Davis Mullen
         </div>
-        <div class="font-sans text-[#f9bfdf] text-4xl mt-2 opacity-90">
+        <div class="font-zen text-[#f9bfdf] text-4xl mt-2 opacity-90">
             Junior Software Developer
         </div>
-        <div class="font-sans text-beige text-md mt-8 w-[600px]">
+        <div class="font-zen text-beige text-md mt-8 w-[600px]">
             Specialising in reactive frameworks like Vue.js, reinforced by expertise in HTML, CSS, JavaScript, and Tailwind.
         </div>
         <div class="mt-8 flex flex-row">

@@ -3,17 +3,17 @@
     <div class="flex justify-center mt-36" v-if="loading == false">
         <div class="id-card">
             <div class="flex flex-col">
-                <div class="flex border-b-[4px] border-[#618EFF] text-[#272727] bg-green justify-center font-sans text-2xl items-center pt-3 pb-2">
+                <div class="flex border-b-[4px] border-[#618EFF] text-[#272727] bg-green justify-center font-zen text-2xl items-center pt-3 pb-2">
                     Identification Card
                 </div>
                 <div class="flex">
                     <div class="relative text-center">
                         <img class="w-[190px] h-[220px] rounded-md m-2 object-cover border-[3px] border-[#272727]" :src="character.image">
-                        <div class="font-sans absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#36b402]" v-if="character.status == 'Alive'">Alive</div>
-                        <div class="font-sans absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#d80505]" v-if="character.status == 'Dead'">Dead</div>
-                        <div class="font-sans absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#7c7c7c]" v-if="character.status == 'unknown'">Missing</div>
+                        <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#36b402]" v-if="character.status == 'Alive'">Alive</div>
+                        <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#d80505]" v-if="character.status == 'Dead'">Dead</div>
+                        <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#7c7c7c]" v-if="character.status == 'unknown'">Missing</div>
                     </div>
-                    <div class="font-sans text-[#272727] w-[250px]">
+                    <div class="font-zen text-[#272727] w-[250px]">
                         <div class="flex justify-end">
                             <div class="m-2 text-base">
                                 ID: {{ character.id }}

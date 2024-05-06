@@ -1,17 +1,17 @@
 <template>
 <nav class="p-7 flex justify-between">
-    <router-link class="text-1xl font-sans text-green" to="/index">
+    <router-link class="text-1xl font-zen text-green" to="/index">
         Rick and Morty Project
     </router-link>
     <div class="router-links flex">
         <div>
-            <router-link class="router font-sans text-blue text-xs" to="/about">About</router-link>
+            <router-link class="router font-zen text-blue text-xs" to="/about">About</router-link>
         </div>
         <div class="ml-3">
-            <router-link class="router font-sans text-blue text-xs" to="/search">Search</router-link>
+            <router-link class="router font-zen text-blue text-xs" to="/search">Search</router-link>
         </div>
         <div class="ml-3">
-            <router-link class="router font-sans text-blue text-xs" to="/index">Index</router-link>
+            <router-link class="router font-zen text-blue text-xs" to="/index">Index</router-link>
         </div>
     </div>
 </nav>

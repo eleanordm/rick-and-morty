@@ -18,10 +18,10 @@ module.exports = {
         'pink': '#F7AAD4',
         'beige': '#C4C4C4',
       },
-      // Main font across all pages
+      // Fonts used across all pages
       fontFamily: {
-        sans: ['Zen Dots', 'sans-serif'],
-        footer: ['Ubuntu Sans Mono']
+        zen: ['Zen Dots', 'sans-serif'],
+        ubuntu: ['Ubuntu Sans Mono']
       },
     },
   },

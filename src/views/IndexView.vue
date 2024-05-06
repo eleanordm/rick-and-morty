@@ -35,7 +35,7 @@
             <div class="w-full flex justify-end pb-6">
                 <span class="close flex justify-center content-center text-white text-lg font-bold w-8 h-8 rounded-full" @click="closeSortModal()">&times;</span>
             </div>
-            <div class="font-sans text-blue">Sort by</div>
+            <div class="font-zen text-blue">Sort by</div>
             <div class="button w-48 pl-3 mt-7" :class="{ active : sortIdAscendingActive }" @click="sortIdAscending()">
                 ID ascending
                 <span class="material-symbols-outlined">
@@ -61,7 +61,7 @@
             <div class="w-full flex justify-end pb-6">
                 <span class="close flex justify-center content-center text-white text-lg font-bold w-8 h-8 rounded-full" @click="closeFilterModal()">&times;</span>
             </div>
-            <div class="font-sans text-blue">Filter by</div>
+            <div class="font-zen text-blue">Filter by</div>
             <div class="button w-35 pl-3 mt-7" :class="{ active : filterOnlyHumanCharactersActive }" @click="filterOnlyHumanCharacters()">
                 Human
                 <span class="material-symbols-outlined pl-1">

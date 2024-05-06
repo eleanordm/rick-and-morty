@@ -2,7 +2,7 @@
 <div>
     <div class="flex justify-center">
         <div class="flex justify-center mt-20 mb-10 max-w-full items-center bg-transparent h-[40px] w-[300px] rounded-full pl-[10px] border-2 border-pink">
-            <input type="text" placeholder="Search characters" v-model="name" @keydown.enter="getAllCharacters()" class="placeholder-blue focus:placeholder-transparent text-blue outline-none bg-transparent font-sans">
+            <input type="text" placeholder="Search characters" v-model="name" @keydown.enter="getAllCharacters()" class="placeholder-blue focus:placeholder-transparent text-blue outline-none bg-transparent font-zen">
             <div class="cursor-pointer h-[30px] w-[30px] border-blue border-2 rounded-full" @click="getAllCharacters()">
                 <span class="material-symbols-outlined mt-[3px] ml-[3px] text-[20px] text-blue">
                     search
@@ -16,7 +16,7 @@
     </div>
     <div v-if="!characterNotFound"></div>
     <div v-else>
-        <div class="text-beige text-center font-sans">Character not found</div>
+        <div class="text-beige text-center font-zen">Character not found</div>
     </div>
     <div class="flex flex-row flex-wrap justify-center mx-32" v-if="loading == true">
         <character-card-skeleton></character-card-skeleton>
