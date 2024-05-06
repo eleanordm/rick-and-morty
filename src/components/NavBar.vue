@@ -1,6 +1,6 @@
 <template>
 <nav class="p-7 flex justify-between">
-    <router-link class="text-1xl font-zen text-green" to="/index">
+    <router-link class="text-1xl font-zen text-green" to="/">
         Rick and Morty Project
     </router-link>
     <div class="router-links flex">

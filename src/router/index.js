@@ -1,10 +1,14 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '../views/AboutView.vue'
 import SearchView from '../views/SearchView.vue'
 import IndexView from '../views/IndexView.vue'
 import CharacterIdView from '../views/CharacterIdView.vue'
 
 const routes = [
+  {
+    path: '/',
+    component: AboutView,
+  },
   {
     path: '/about',
     name: 'about',
@@ -44,7 +48,7 @@ const router = createRouter({
     // When a character card is clicked, the ID card page will load and automatically scroll to the top of the page
     return { top: 0 }
   },
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 
