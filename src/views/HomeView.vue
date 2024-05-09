@@ -8,15 +8,15 @@
             By Eleanor Davis Mullen
         </div>
         <div class="font-zen text-beige text-md mt-8 w-[600px]">
-            Placeholder text
+            I'm obsessed with Rick and Morty and coding, so naturally, I built this website! Ready to discover your favorite character? Just click 'search' below, and you'll find all 826 characters waiting for you.
         </div>
         <div class="mt-8 flex flex-row">
-            <div class="button border-pink mr-4 text-sm w-[120px]">
+            <router-link to="/search" class="button border-pink mr-4 text-sm w-[120px]">
                 Search
-            </div>
-            <div class="button border-pink mr-4 text-sm w-[120px]">
+            </router-link>
+            <router-link to="/about" class="button border-pink mr-4 text-sm w-[120px]">
                 About me
-            </div>
+            </router-link>
         </div>
     </div>
 </div>
