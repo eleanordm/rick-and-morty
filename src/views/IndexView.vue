@@ -190,6 +190,7 @@ export default {
             this.sortIdDecendingActive = true
         },
         filterOnlyHumanCharacters: function () {
+            this.characters = this.originalCharacters
             this.characters = this.characters.filter((item) => {
                 return (item.species == "Human")
             })

@@ -161,7 +161,7 @@ export default {
         padding: 0.5em 0;
         width: 100%;
         color: white;
-        background-color: transparent;
+        background-color: rgb(0, 0, 0);
     }
 
     .menu>li:not(:last-child) {
