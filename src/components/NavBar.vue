@@ -60,6 +60,7 @@ export default {
     }
 }
 
+// Hamburger menu styling
 .menu {
     display: flex;
     flex-direction: row;
