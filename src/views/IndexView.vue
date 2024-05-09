@@ -225,7 +225,8 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/modal.scss";
 
+// Styling to show which button is active
 .active {
-    background-color: #f88fc9;
+    background-color: #f69acc;
 }
 </style>

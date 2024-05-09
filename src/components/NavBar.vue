@@ -11,7 +11,7 @@
         <label class='menu-button-container pt-[5px]' for="menu-toggle">
             <div class='menu-button'></div>
         </label>
-        <ul class="menu p7">
+        <ul class="menu">
             <li>
                 <router-link class="router font-zen text-blue text-sm" to="/">Home</router-link>
             </li>
