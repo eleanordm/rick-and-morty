@@ -1,20 +1,20 @@
 <template>
 <div>
-    <div class="mx-8 mb-8 mt-16 flex flex-col items-center">
-        <div class="flex flex-row">
-            <div class="button" @click="toggleSortModal()">
+    <div class="mx-8 mb-6 mt-16 flex items-center justify-center flex-col">
+        <div class="flex-col md:flex-row flex md:max-w-lg w-full sm:w-[450px]">
+            <div class="button w-full mb-3 md:mb-0" @click="toggleSortModal()">
                 Sort
                 <span class="material-symbols-outlined pl-1">
                     sort
                 </span>
             </div>
-            <div class="button ml-8" @click="toggleFilterModal()">
+            <div class="button w-full mb-3 md:mb-0 md:ml-8" @click="toggleFilterModal()">
                 Filter
                 <span class="material-symbols-outlined pl-1">
                     filter_list
                 </span>
             </div>
-            <div class="button-two button ml-8" @click="getCharacterData()">
+            <div class="button-two button w-full md:ml-8" @click="getCharacterData()">
                 Clear All
                 <span class="material-symbols-outlined pl-1">
                     clear_all
@@ -22,11 +22,11 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-row flex-wrap justify-center mx-32" v-if="loading == false">
+    <div class="flex flex-row flex-wrap justify-center lg:mx-32" v-if="loading == false">
         <character-card v-for="character in characters" :key="character" :image="character.image" :name="character.name" :id="character.id">
         </character-card>
     </div>
-    <div class="flex flex-row flex-wrap justify-center mx-32" v-if="loading == true">
+    <div class="flex flex-row flex-wrap justify-center lg:mx-32" v-if="loading == true">
         <character-card-skeleton></character-card-skeleton>
     </div>
 
