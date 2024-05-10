@@ -1,20 +1,20 @@
 <template>
-<div class="mt-44 flex justify-center">
-    <div class="flex flex-col w-[1000px] text-left">
-        <div class="font-zen text-blue text-6xl mt-5">
+<div class="md:p-[85px] lg:mt-[75px] xl:p-24 flex justify-left md:justify-center p-12 sm:mt-10">
+    <div class="w-[1000px] text-center md:text-left">
+        <div class="font-zen text-blue text-3xl md:text-6xl mt-5">
             Rick and Morty Project
         </div>
-        <div class="font-zen text-pink text-2xl mt-2 opacity-90">
+        <div class="font-zen text-[#f9bfdf] text-1xl md:text-3xl mt-2 opacity-90">
             By Eleanor Davis Mullen
         </div>
-        <div class="font-zen text-beige text-md mt-8 w-[600px]">
+        <div class="font-zen text-beige text-sm md:text-md mt-8 md:w-[600px]">
             I'm obsessed with Rick and Morty and coding, so naturally, I built this website! Ready to discover your favorite character? Just click 'search' below, and you'll find all 826 characters waiting for you.
         </div>
-        <div class="mt-8 flex flex-row">
-            <router-link to="/search" class="button border-pink mr-4 text-sm w-[120px]">
+        <div class="mt-8 flex flex-col md:flex-row w-full items-center md:max-w-xs">
+            <router-link to="/search" class="button border-pink text-sm md:mb-0 mb-3 mr-4 md:h-[35px] h-[40px] w-full max-w-xl">
                 Search
             </router-link>
-            <router-link to="/about" class="button border-pink mr-4 text-sm w-[120px]">
+            <router-link to="/about" class="button border-pink text-sm md:mb-0 mb-3 mr-4 md:h-[35px] h-[40px] w-full max-w-xl">
                 About me
             </router-link>
         </div>

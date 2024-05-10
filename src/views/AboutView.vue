@@ -20,7 +20,7 @@
             <a href="mailto:eleanordm83@gmail.com" class="button text-sm md:mb-0 mb-3 mr-4 md:h-[35px] h-[40px] w-full max-w-xl">
                 Email
             </a>
-            <a href="https://github.com/eleanordm/rick-and-morty" target="_blank" class="button text-sm  mr-4 md:mb-0 md:h-[35px] h-[40px] w-full max-w-xl">
+            <a href="https://github.com/eleanordm/rick-and-morty" target="_blank" class="button text-sm mr-4 md:mb-0 md:h-[35px] h-[40px] w-full max-w-xl">
                 Github
             </a>
         </div>
