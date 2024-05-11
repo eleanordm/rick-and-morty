@@ -1,26 +1,26 @@
 <template>
 <div>
-    <div class="flex justify-center mt-36" v-if="loading == false">
-        <div class="id-card">
+    <div class="flex justify-center mt-16 md:mt-36" v-if="loading == false">
+        <div class="id-card h-full md:m-h-[300px]">
             <div class="flex flex-col">
-                <div class="flex border-b-[4px] border-[#618EFF] text-[#272727] bg-green justify-center font-zen text-2xl items-center pt-3 pb-2">
+                <div class="flex border-b-[4px] border-[#618EFF] text-[#272727] bg-green justify-center font-zen text-xl md:text-2xl items-center pt-3 pb-2">
                     Identification Card
                 </div>
-                <div class="flex">
+                <div class="flex md:flex-row flex-col items-center">
                     <div class="relative text-center">
                         <img class="w-[190px] h-[220px] rounded-md m-2 object-cover border-[3px] border-[#272727]" :src="character.image">
                         <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#36b402]" v-if="character.status == 'Alive'">Alive</div>
                         <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#d80505]" v-if="character.status == 'Dead'">Dead</div>
                         <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%] bg-[#7c7c7c]" v-if="character.status == 'unknown'">Missing</div>
                     </div>
-                    <div class="font-zen text-[#272727] w-[250px]">
-                        <div class="flex justify-end">
+                    <div class="font-zen text-[#272727] w-[250px] p-[9px] md:p-0">
+                        <div class="flex justify-start md:justify-end">
                             <div class="m-2 text-base">
                                 ID: {{ character.id }}
                             </div>
                         </div>
                         <div class="flex flex-col h-[190px] justify-between">
-                            <div class="mx-3">
+                            <div class="pl-[7px] md:mx-3">
                                 <div class="flex flex-row">
                                     <div class="text-blue text-lg"> {{ character.name }}</div>
                                 </div>
@@ -86,7 +86,6 @@ export default {
     border-radius: .7rem;
     overflow: hidden;
     transition: .5s all;
-    max-height: 300px;
 
     ::before {
         position: fixed;

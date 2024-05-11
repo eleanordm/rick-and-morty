@@ -1,11 +1,11 @@
 <template>
 <div>
-    <div class="flex justify-center mt-36">
-        <div class="bg-[#333337] rounded-lg border-[4px] border-[#333337]">
+    <div class="flex justify-center mt-16 md:mt-36">
+        <div class="bg-[#333337] rounded-lg border-[4px] border-[#333337] h-full md:m-h-[300px]">
             <div class="flex flex-col items-center">
-                <div class="darkui2-shimmer bg-[#f0f0f0] h-[35px] w-[300px] rounded-sm mt-[10px] mb-[10px]">
+                <div class="darkui2-shimmer bg-[#f0f0f0] w-[200px] h-[35px] md:w-[300px] rounded-sm mt-[10px] mb-[10px]">
                 </div>
-                <div class="flex">
+                <div class="flex-col md:flex">
                     <div>
                         <img src="../assets/rick-skeleton.png" class="w-[190px] h-[220px] bg-[#00000063] rounded-md m-2 object-cover border-[3px] border-[#27272735]">
                     </div>
