@@ -31,7 +31,7 @@
     </div>
 
     <div class="modal flex items-center justify-center fixed inset-0 w-full h-full overflow-auto" v-if="showSortModal == true">
-        <div class="modal-content flex items-center flex-col w-[310px] h-[420px] p-10 rounded-[50px]">
+        <div class="modal-content flex items-center flex-col w-[260px] sm:w-[310px] h-[420px] p-10 rounded-[50px]">
             <div class="w-full flex justify-end pb-6">
                 <span class="close flex justify-center content-center text-white text-lg font-bold w-8 h-8 rounded-full" @click="closeSortModal()">&times;</span>
             </div>
