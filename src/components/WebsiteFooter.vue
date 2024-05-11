@@ -9,13 +9,13 @@
     </div>
     <div class="flex mt-2 mb-1">
         <a href="https://github.com/eleanordm/rick-and-morty" target="_blank">
-            <img src="../assets/github.png" class="w-[20px] h-[20px] mr-3 cursor-pointer">
+            <img alt="GitHub" src="../assets/github.png" class="w-[20px] h-[20px] mr-3 cursor-pointer">
         </a>
         <a href="https://www.linkedin.com/in/eleanor-davis-mullen-66596519a/" target="_blank">
-            <img src="../assets/linkedin.png" class="w-[20px] h-[20px] mr-3 cursor-pointer">
+            <img alt="LinkedIn" src="../assets/linkedin.png" class="w-[20px] h-[20px] mr-3 cursor-pointer">
         </a>
         <a href="mailto:eleanordm83@gmail.com" target="_blank">
-            <img src="../assets/email.png" class="w-[20px] h-[20px] cursor-pointer">
+            <img alt="Email" src="../assets/email.png" class="w-[20px] h-[20px] cursor-pointer">
         </a>
     </div>
 </div>

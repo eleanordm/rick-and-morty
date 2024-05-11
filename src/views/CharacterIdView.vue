@@ -8,7 +8,7 @@
                 </div>
                 <div class="flex md:flex-row flex-col items-center">
                     <div class="relative text-center">
-                        <img class="w-[190px] h-[220px] rounded-md m-2 object-cover border-[3px] border-[#272727]" :src="character.image">
+                        <img alt="character" class="w-[190px] h-[220px] rounded-md m-2 object-cover border-[3px] border-[#272727]" :src="character.image">
                         <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%]  bg-[#36b402]" v-if="character.status == 'Alive'">Alive</div>
                         <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white  bg-opacity-[78%]  bg-[#d80505]" v-if="character.status == 'Dead'">Dead</div>
                         <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%]  bg-[#929292]" v-if="character.status == 'unknown'">Missing</div>
@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                             <div class="flex justify-center">
-                                <img src="../assets/barcode.png" class="w-[200px] h-[25px] mb-[10px]">
+                                <img alt="barcode" src="../assets/barcode.png" class="w-[200px] h-[25px] mb-[10px]">
                             </div>
                         </div>
                     </div>
