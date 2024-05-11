@@ -11,7 +11,7 @@
         <label class='menu-button-container pt-[5px]' for="menu-toggle">
             <div class='menu-button'></div>
         </label>
-        <ul class="menu">
+        <ul class="menu z-[1]">
             <li>
                 <router-link class="router font-zen text-blue text-sm" to="/">Home</router-link>
             </li>
@@ -150,8 +150,8 @@ export default {
 
     #menu-toggle:checked~.menu li {
         border: 1px solid #00D7F5;
-        height: 2.5em;
-        padding: 0.5em;
+        align-items: center;
+        height: 3.5em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
 

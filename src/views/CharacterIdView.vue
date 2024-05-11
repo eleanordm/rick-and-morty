@@ -7,11 +7,11 @@
                     Identification Card
                 </div>
                 <div class="flex md:flex-row flex-col items-center">
-                    <div class="sm:relative text-center">
+                    <div class="relative text-center">
                         <img class="w-[190px] h-[220px] rounded-md m-2 object-cover border-[3px] border-[#272727]" :src="character.image">
-                        <div class="font-zen sm:absolute bottom-[17px] left-[10px] right-[10px] sm:text-white text-[#36b402] sm:bg-opacity-[78%]  sm:bg-[#36b402]" v-if="character.status == 'Alive'">Alive</div>
-                        <div class="font-zen sm:absolute bottom-[17px] left-[10px] right-[10px] sm:text-white text-[#d80505] sm:bg-opacity-[78%]  sm:bg-[#d80505]" v-if="character.status == 'Dead'">Dead</div>
-                        <div class="font-zen sm:absolute bottom-[17px] left-[10px] right-[10px] sm:text-white text-[#525252] sm:bg-opacity-[78%]  sm:bg-[#7c7c7c]" v-if="character.status == 'unknown'">Missing</div>
+                        <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%]  bg-[#36b402]" v-if="character.status == 'Alive'">Alive</div>
+                        <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white  bg-opacity-[78%]  bg-[#d80505]" v-if="character.status == 'Dead'">Dead</div>
+                        <div class="font-zen absolute bottom-[17px] left-[10px] right-[10px] text-white bg-opacity-[78%]  bg-[#929292]" v-if="character.status == 'unknown'">Missing</div>
                     </div>
                     <div class="font-zen text-[#272727] w-[250px] p-[9px] md:p-0">
                         <div class="flex justify-start md:justify-end">
