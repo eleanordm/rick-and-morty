@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="flex justify-center mt-16 md:mt-36" v-if="loading == false">
+    <div class="flex justify-center mt-10 md:mt-36" v-if="loading == false">
         <div class="id-card h-full md:m-h-[300px]">
             <div class="flex flex-col">
                 <div class="flex border-b-[4px] border-[#618EFF] text-[#272727] bg-green justify-center font-zen text-xl md:text-2xl items-center pt-3 pb-2">
