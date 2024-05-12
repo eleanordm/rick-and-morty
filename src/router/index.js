@@ -50,7 +50,8 @@ const router = createRouter({
     return { top: 0 }
   },
   history: createWebHistory(),
-  routes
+  routes,
+  base: process.env.NODE_ENV === 'production' ? '/rick-and-morty/' : '/'
 })
 
 // Changes the title of a page, or sets a default title if unknown
