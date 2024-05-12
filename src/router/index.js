@@ -56,7 +56,6 @@ const router = createRouter({
 // Changes the title of a page, or sets a default title if unknown
 router.beforeEach((to, from) => {
   document.title = to.meta?.title ?? 'Rick and Morty'
-  
 })
 
 export default router
