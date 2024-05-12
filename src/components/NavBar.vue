@@ -54,7 +54,7 @@ export default {
 */
 .router {
 
-    // CSS to change the colour of active nav bar links.
+    // CSS to change the colour of active nav bar links
     &.router-link-exact-active {
         color: #2755c7;
     }

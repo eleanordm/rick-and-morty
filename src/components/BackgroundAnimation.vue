@@ -84,5 +84,4 @@ export default {
     opacity: 0.3;
     font-family: sans-serif;
 }
-
 </style>
