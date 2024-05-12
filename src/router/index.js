@@ -51,12 +51,14 @@ const router = createRouter({
   },
   history: createWebHistory(),
   routes,
-  base: process.env.NODE_ENV === 'production' ? '/rick-and-morty/' : '/'
+  base: process.env.NODE_ENV === 'production' ? '/rick-and-morty/' : '/',
+  outputDir: "dist"
 })
 
 // Changes the title of a page, or sets a default title if unknown
 router.beforeEach((to, from) => {
   document.title = to.meta?.title ?? 'Rick and Morty'
+  
 })
 
 export default router
