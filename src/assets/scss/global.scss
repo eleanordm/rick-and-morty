@@ -1,3 +1,3 @@
 .button {
-    @apply bg-transparent border-2 border-[#f69acc] text-blue font-zen flex justify-center items-center text-[15px] rounded-full w-[160px] h-[35px] hover:bg-[#f69acc] delay-75 cursor-pointer;
+    @apply bg-transparent border-2 border-[#f69acc] text-blue font-zen flex justify-center items-center text-[15px] rounded-full w-[160px] h-[35px] sm:hover:bg-[#f69acc] delay-75 cursor-pointer;
 }
