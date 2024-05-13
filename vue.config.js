@@ -4,5 +4,4 @@ module.exports = defineConfig({
   lintOnSave: false,
   outputDir: "docs",
   publicPath: process.env.NODE_ENV === "production" ? "/rick-and-morty/" : "/",
-  base: process.env.NODE_ENV === "production" ? "/rick-and-morty/" : "/"
 })
