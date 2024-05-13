@@ -5,7 +5,7 @@
     </router-link>
     <div class="sm:hidden flex justify-between w-full">
         <router-link to="/">
-            <img src="../assets/nav-bar-image.png" class="max-w-[96px] max-h-[46px] pb-[5px]">
+            <img src="../assets/nav-bar-image.png" alt="Logo" aria-label="Home" class="max-w-[96px] max-h-[46px] pb-[5px]">
         </router-link>
         <input id="menu-toggle" type="checkbox">
         <label class='menu-button-container pt-[5px]' for="menu-toggle">
@@ -149,7 +149,8 @@ export default {
     }
 
     #menu-toggle:checked~.menu li {
-        border: 1px solid #00D7F5;
+        border-top: 1px solid #00D7F5;
+        border-bottom: 1px solid #00D7F5;
         align-items: center;
         height: 3.5em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
