@@ -13,16 +13,16 @@
         </label>
         <ul class="menu z-[1]">
             <li>
-                <router-link class="router font-zen text-blue text-sm" to="/">Home</router-link>
+                <router-link class="router py-[20px] px-[100%] font-zen text-blue text-sm" to="/">Home</router-link>
             </li>
             <li>
-                <router-link class="router font-zen text-blue text-sm" to="/about">About</router-link>
+                <router-link class="router py-[20px] px-[100%] font-zen text-blue text-sm" to="/about">About</router-link>
             </li>
             <li>
-                <router-link class="router font-zen text-blue text-sm" to="/search">Search</router-link>
+                <router-link class="router py-[20px] px-[100%] font-zen text-blue text-sm" to="/search">Search</router-link>
             </li>
             <li>
-                <router-link class="router font-zen text-blue text-sm" to="/index">Index</router-link>
+                <router-link class="router py-[20px] px-[100%] font-zen text-blue text-sm" to="/index">Index</router-link>
             </li>
         </ul>
     </div>
