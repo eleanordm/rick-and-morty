@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="flex justify-center mt-10 md:mt-36" v-if="loading == false">
-        <div class="id-card h-full md:m-h-[300px]">
+        <div class="id-card-animation h-full md:m-h-[300px]">
             <div class="flex flex-col">
                 <div class="flex border-b-[4px] border-[#618EFF] text-[#272727] bg-green justify-center font-zen text-xl md:text-2xl items-center pt-3 pb-2">
                     Identification Card
@@ -79,7 +79,7 @@ export default {
 
 <style lang="scss">
 // id card animation styling
-.id-card {
+.id-card-animation {
     border: 4px solid #618EFF;
     background-color: rgba(238, 236, 236, 0.915);
     box-shadow: 0 7px 20px 5px #00000046;
@@ -92,7 +92,7 @@ export default {
         content: "";
         box-shadow: 0 0 100px 40px #ffffff08;
         top: -10%;
-        left: -100%;
+        left: -150%;
         transform: rotate(-45deg);
         height: 60rem;
         transition: .7s all;
