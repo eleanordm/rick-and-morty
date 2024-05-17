@@ -18,7 +18,7 @@
     <div v-else>
         <div class="text-beige text-center font-zen">Character not found</div>
     </div>
-    <div class="flex flex-row flex-wrap justify-center mx-0 max-w-[1500px]" v-if="loading == true">
+    <div class="flex flex-row flex-wrap justify-center md:mx-[40px] lg:mx-[50px] mx-0 max-w-[1500px]" v-if="loading == true">
         <character-card-skeleton></character-card-skeleton>
     </div>
 </div>
