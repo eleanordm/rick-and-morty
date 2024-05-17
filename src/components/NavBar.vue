@@ -1,5 +1,5 @@
 <template>
-<nav class="p-7 flex justify-between">
+<nav class="p-7 flex justify-between w-[100%] max-w-[1500px]">
     <router-link class="text-1xl font-zen text-green hidden sm:block" to="/">
         Rick and Morty Project
     </router-link>

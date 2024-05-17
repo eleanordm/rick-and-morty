@@ -8,7 +8,7 @@ import CharacterIdView from '../views/CharacterIdView.vue'
 const routes = [
   {
     path: '/',
-    component: HomeView,
+    component: HomeView,   
   },
   {
     path: '/about',

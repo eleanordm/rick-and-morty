@@ -3,7 +3,7 @@
     <body>
         <background-animation></background-animation>
         <div class="page-container relative min-h-screen">
-            <div class="page content-wrap min-h-screen pb-14">
+            <div class="page content-wrap min-h-screen pb-14 flex flex-col items-center">
                 <nav-bar></nav-bar>
                 <router-view></router-view>
             </div>
