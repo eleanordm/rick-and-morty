@@ -1,5 +1,5 @@
 <template>
-<div class="md:p-[85px] lg:mt-[75px] xl:p-24 flex justify-left md:justify-center p-10 sm:mt-10">
+<div class="md:pt-[85px] lg:mt-[75px] lg:pr-36 flex justify-left md:justify-center p-10 sm:mt-10">
     <div class="text-center md:text-left">
         <div class="font-zen text-blue text-xs md:text-sm">
             Hi there, my name is
