@@ -1,5 +1,5 @@
 <template>
-<div class="xl:flex xl:justify-center xl:flex-col xl:items-center md:mx-[50px]">
+<div class="xl:flex xl:justify-center xl:flex-col xl:items-center md:mx-[40px] lg:mx-[50px]">
     <div class="mx-8 mb-6 mt-16 flex items-center justify-center flex-col">
         <div class="flex-col md:flex-row flex md:max-w-lg w-full sm:w-[450px]">
             <div class="button w-full mb-3 md:mb-0" @click="toggleSortModal()">
