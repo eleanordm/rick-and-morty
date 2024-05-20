@@ -47,14 +47,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* 
-    Specific styling for about, search and index router links
-    Originally (a)
-    Changed to .router to amend the styling to the linked logo
-*/
-.router {
 
-    // CSS to change the colour of active nav bar links
+.router {
+    // Colour for active nav bar links
     &.router-link-exact-active {
         color: #2755c7;
     }

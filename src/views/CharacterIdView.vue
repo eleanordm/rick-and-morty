@@ -78,7 +78,8 @@ export default {
 </script>
 
 <style lang="scss">
-// id card animation styling
+
+// ID card animation styling
 .id-card-animation {
     border: 4px solid #618EFF;
     background-color: rgba(238, 236, 236, 0.915);
