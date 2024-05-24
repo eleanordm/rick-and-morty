@@ -8,8 +8,8 @@
             <img src="../assets/nav-bar-image.png" alt="Logo" aria-label="Home" class="max-w-[96px] max-h-[46px] pb-[5px]">
         </router-link>
         <input id="menu-toggle" type="checkbox">
-        <label class='menu-button-container pt-[5px]' for="menu-toggle">
-            <div class='menu-button'></div>
+        <label class="menu-button-container pt-[5px]" for="menu-toggle">
+            <div class="menu-button"></div>
         </label>
         <ul class="menu z-[1]">
             <li>
@@ -47,8 +47,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .router {
+
     // Colour for active nav bar links
     &.router-link-exact-active {
         color: #2755c7;
