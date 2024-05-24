@@ -7,8 +7,8 @@
                 <nav-bar></nav-bar>
                 <router-view></router-view>
             </div>
-            <website-footer></website-footer>
         </div>
+        <website-footer></website-footer>
     </body>
 </div>
 </template>
@@ -38,7 +38,7 @@ export default {
     color: #ffffff;
 }
 
-// Background colour for all pages across website
+// Background colour for all pages
 body {
     background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgb(13, 13, 38) 60%);
 }
