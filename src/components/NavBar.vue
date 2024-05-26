@@ -28,6 +28,9 @@
     </div>
     <div class="router-links hidden sm:flex">
         <div>
+            <router-link class="router font-zen text-blue text-xs" to="/">Home</router-link>
+        </div>
+        <div class="ml-3">
             <router-link class="router font-zen text-blue text-xs" to="/about">About</router-link>
         </div>
         <div class="ml-3">
