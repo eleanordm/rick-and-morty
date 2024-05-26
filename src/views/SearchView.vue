@@ -43,9 +43,6 @@ export default {
             characterNotFound: false
         }
     },
-    created: function () {
-
-    },
     methods: {
         getAllCharacters: async function () {
             this.loading = true
