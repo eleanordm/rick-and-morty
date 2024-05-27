@@ -51,7 +51,6 @@ export default {
 
 <style lang="scss" scoped>
 .router {
-
     // Colour for active nav bar links
     &.router-link-exact-active {
         color: #2755c7;
