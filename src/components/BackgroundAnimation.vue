@@ -46,6 +46,7 @@ export default {
     top: 0;
     left: 10px;
     width: 100%;
+    height: 100%
 }
 
 @keyframes blink {

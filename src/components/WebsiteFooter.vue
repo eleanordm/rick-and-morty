@@ -1,5 +1,5 @@
 <template>
-<div class="bg-[#f69acc] w-full bottom-0 h-40 flex flex-col items-center justify-end pb-[8px]">
+<div class="bg-[#f69acc] w-full bottom-0 h-40 flex flex-col items-center justify-end pb-[8px] relative z-[1px]">
     <div class="text-md font-ubuntu text-white"><b>Eleanor Davis Mullen</b></div>
     <div class="text-xs font-ubuntu text-white">Junior Software Devloper</div>
     <div class="flex flex-row mt-2 font-ubuntu">
