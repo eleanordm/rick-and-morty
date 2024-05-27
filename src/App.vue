@@ -1,5 +1,6 @@
 <template>
 <div>
+
     <body>
         <background-animation></background-animation>
         <div class="page-container relative min-h-screen">
@@ -41,7 +42,8 @@ export default {
 // Background colour for all pages
 body {
     background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgb(13, 13, 38) 60%);
-    background-attachment: fixed
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center
 }
-
 </style>
