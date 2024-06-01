@@ -46,7 +46,7 @@ const routes = [
 
 const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
-    // When a character card is clicked, the ID card page will load and automatically scroll to the top of the page
+    // When a character card is clicked, CharacterIdView will load and automatically scroll to the top of the page
     return { top: 0 }
   },
   history: createWebHashHistory(),
