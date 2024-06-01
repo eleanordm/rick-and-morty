@@ -44,6 +44,13 @@ export default {
         }
     },
     methods: {
+        /**
+         * Gets character data from Rick and Morty API.
+         * Searches for characters by name.
+         * Sets error message if character name is not found.
+         * 
+         * @returns {void}
+         */
         getAllCharacters: async function () {
             this.loading = true
 
@@ -59,7 +66,7 @@ export default {
                     console.error("Error:", error.message);
                 }
             }
-
+            
             this.loading = false
         },
     }

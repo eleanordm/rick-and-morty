@@ -67,6 +67,11 @@ export default {
         this.getCharacterId()
     },
     methods: {
+        /**
+         * Gets specific character data from the Rick and Morty API using character id.
+         * 
+         * @return {void}
+         */
         getCharacterId: async function () {
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/" + this.$route.query.id)
             this.character = rawData.data
@@ -78,7 +83,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 // ID card animation styling
 .id-card-animation {
     border: 4px solid #618EFF;

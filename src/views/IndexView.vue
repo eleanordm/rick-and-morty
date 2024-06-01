@@ -115,7 +115,11 @@ export default {
         this.getCharacterData()
     },
     methods: {
-        // Gets all character data 
+        /**
+         * Gets character data from the Rick and Morty API.
+         * 
+         * @returns {void}
+         */
         getCharacterData: async function () {
             // 50 characters in total, removed the ones with no image
             var rawData = await axios.get("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55")
@@ -131,6 +135,11 @@ export default {
 
             this.loading = false
         },
+        /**
+         * Shows and hides sort modal.
+         * 
+         * @returns {void}
+         */
         toggleSortModal: function () {
             if (this.showSortModal == false) {
                 this.showSortModal = true
@@ -140,6 +149,11 @@ export default {
 
             this.showSortModal = true
         },
+        /**
+         * Shows and hides filter modal.
+         * 
+         * @returns {void}
+         */
         toggleFilterModal: function () {
             if (this.showFilterModal == false) {
                 this.showFilterModal = true
@@ -149,12 +163,27 @@ export default {
 
             this.showFilterModal = true
         },
+        /**
+         * Hides sort modal.
+         * 
+         * @returns {void}
+         */
         closeSortModal: function () {
             this.showSortModal = false
         },
+        /**
+         * Hides filter modal.
+         * 
+         * @return {void}
+         */
         closeFilterModal: function () {
             this.showFilterModal = false
         },
+        /**
+         * Sorts characters in alphabetical order from a-z.
+         * 
+         * @return {void}
+         */
         sortAlphabetically: function () {
             this.characters.sort(function (a, b) {
                 if (a.name < b.name) {
@@ -170,6 +199,11 @@ export default {
             this.sortIdAscendingActive = false
             this.sortAlphabeticallyActive = true
         },
+        /**
+         * Sorts characters by id - ascending order.
+         * 
+         * @return {void}
+         */
         sortIdAscending: function () {
             this.characters.sort((a, b) => a.id - b.id);
 
@@ -177,6 +211,11 @@ export default {
             this.sortIdDecendingActive = false
             this.sortIdAscendingActive = true
         },
+        /**
+         * Sorts characters by id - decending order.
+         * 
+         * @returns {void}
+         */
         sortIdDecending: function () {
             this.characters.sort((a, b) => a.id - b.id);
             this.characters.reverse();
@@ -185,6 +224,11 @@ export default {
             this.sortIdAscendingActive = false
             this.sortIdDecendingActive = true
         },
+        /**
+         * Filters to show only human characters.
+         * 
+         * @return {void}
+         */
         filterOnlyHumanCharacters: function () {
             this.characters = this.originalCharacters
             this.characters = this.characters.filter((item) => {
@@ -195,6 +239,11 @@ export default {
             this.filterOnlyDeadCharactersActive = false
             this.filterOnlyHumanCharactersActive = true
         },
+        /**
+         * Filters to show only alive characters.
+         * 
+         * @returns {void}
+         */
         filterOnlyAliveCharacters: function () {
             this.characters = this.originalCharacters
             this.characters = this.characters.filter((item) => {
@@ -205,6 +254,11 @@ export default {
             this.filterOnlyHumanCharactersActive = false
             this.filterOnlyAliveCharactersActive = true
         },
+        /**
+         * Filters to show only dead characters.
+         * 
+         * @return {void}
+         */
         filterOnlyDeadCharacters: function () {
             this.characters = this.originalCharacters
             this.characters = this.characters.filter((item) => {
