@@ -8,7 +8,7 @@
             Eleanor Davis Mullen
         </div>
         <div class="font-zen text-[#f9bfdf] text-1xl md:text-3xl mt-2 opacity-90">
-            Junior Software Developer
+            Software Developer
         </div>
         <div class="font-zen text-beige text-sm md:text-md mt-8 md:w-[600px]">
             Specialising in reactive frameworks like Vue.js, reinforced by expertise in HTML, CSS, JavaScript, and Tailwind.

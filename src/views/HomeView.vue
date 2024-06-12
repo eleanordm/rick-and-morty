@@ -8,7 +8,7 @@
             By Eleanor Davis Mullen
         </div>
         <div class="font-zen text-beige text-sm md:text-md mt-8 md:w-[600px]">
-            I'm obsessed with Rick and Morty and coding, so naturally, I built this website! Ready to discover your favorite character? Just click 'search' below, and you'll find all 826 characters waiting for you.
+            I'm obsessed with Rick and Morty and coding, so naturally, I built this website! Ready to discover your favourite character? Just click 'search' below, and you'll find all 826 characters waiting for you.
         </div>
         <div class="mt-8 flex flex-col md:flex-row w-full items-center md:max-w-xs">
             <router-link to="/search" class="button border-pink text-sm md:mb-0 mb-3 mr-4 md:h-[35px] h-[40px] w-full max-w-xl">
