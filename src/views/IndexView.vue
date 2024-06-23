@@ -4,21 +4,15 @@
         <div class="flex-col md:flex-row flex md:max-w-lg w-full sm:w-[450px]">
             <div class="button w-full mb-3 md:mb-0" @click="toggleSortModal()">
                 Sort
-                <span class="material-symbols-outlined pl-1">
-                    sort
-                </span>
+                <img src="../assets/sort-icon.png" class="h-[20px] w-[20px] ml-[3px]">
             </div>
             <div class="button w-full mb-3 md:mb-0 md:ml-8" @click="toggleFilterModal()">
                 Filter
-                <span class="material-symbols-outlined pl-1">
-                    filter_list
-                </span>
+                <img src="../assets/filter-icon.png" class="h-[20px] w-[20px] ml-[3px]">
             </div>
             <div class="button-two button w-full md:ml-8" @click="getCharacterData()">
                 Clear All
-                <span class="material-symbols-outlined pl-1">
-                    clear_all
-                </span>
+                <img src="../assets/clear-icon.png" class="h-[20px] w-[20px] ml-[3px]">
             </div>
         </div>
     </div>
@@ -38,21 +32,15 @@
             <div class="font-zen text-blue">Sort by</div>
             <div class="button w-48 pl-3 mt-7" :class="{ active : sortIdAscendingActive }" @click="sortIdAscending()">
                 ID ascending
-                <span class="material-symbols-outlined">
-                    expand_less
-                </span>
+                <img src="../assets/arrow-up-icon.png" class="h-[20px] w-[20px] ml-[3px]">
             </div>
             <div class="button w-48 pl-3 mt-7" :class="{ active : sortIdDecendingActive }" @click="sortIdDecending()">
                 ID descending
-                <span class="material-symbols-outlined pr-1">
-                    expand_more
-                </span>
+                <img src="../assets/arrow-down-icon.png" class="h-[20px] w-[20px] ml-[3px] mt-1">
             </div>
             <div class="button w-48 pl-3 mt-7" :class="{ active : sortAlphabeticallyActive }" @click="sortAlphabetically()">
                 Alphabetical
-                <span class="material-symbols-outlined pl-1">
-                    sort_by_alpha
-                </span>
+                <img src="../assets/alpha-icon.png" class="h-[20px] w-[20px] ml-[3px]">
             </div>
         </div>
     </div>
@@ -64,21 +52,15 @@
             <div class="font-zen text-blue">Filter by</div>
             <div class="button w-35 pl-3 mt-7" :class="{ active : filterOnlyHumanCharactersActive }" @click="filterOnlyHumanCharacters()">
                 Human
-                <span class="material-symbols-outlined pl-1">
-                    person
-                </span>
+                <img src="../assets/person-icon.png" class="h-[20px] w-[20px] ml-[3px]">
             </div>
             <div class="button w-35 pl-3 mt-7" :class="{ active : filterOnlyAliveCharactersActive }" @click="filterOnlyAliveCharacters()">
                 Alive
-                <span class="material-symbols-outlined pl-1">
-                    ecg_heart
-                </span>
+                <img src="../assets/ecg-heart-icon.png" class="h-[20px] w-[20px] ml-[3px]">
             </div>
             <div class="button w-35 pl-3 mt-7" :class="{ active : filterOnlyDeadCharactersActive }" @click="filterOnlyDeadCharacters()">
                 Dead
-                <span class="material-symbols-outlined pl-1">
-                    skull
-                </span>
+                <img src="../assets/skull-icon.png" class="h-[20px] w-[20px] ml-[3px]">
             </div>
         </div>
     </div>
