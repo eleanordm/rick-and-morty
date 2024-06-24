@@ -11,7 +11,7 @@
             Software Developer
         </div>
         <div class="font-zen text-beige text-sm md:text-md mt-8 md:w-[600px]">
-            Specialising in reactive frameworks like Vue.js, reinforced by expertise in HTML, CSS, JavaScript, and Tailwind.
+            Specialising in reactive frameworks like Vue.js, reinforced by expertise in Javascript, PHP, MySQL, Tailwind, HTML and SCSS.
         </div>
         <div class="mt-8 flex flex-col md:flex-row w-full items-center md:max-w-md">
             <a href="https://www.linkedin.com/in/eleanor-davis-mullen-66596519a/" target="_blank" class="button text-sm md:mb-0 mb-3 mr-4 md:h-[35px] h-[40px] w-full max-w-xl">
