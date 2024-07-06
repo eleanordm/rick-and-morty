@@ -56,7 +56,8 @@ export default {
                 var rawData = await axios.get("https://rickandmortyapi.com/api/character/?name=" + this.name);
                 this.characters = rawData.data.results;
                 this.characterNotFound = false;
-            } catch (error) {
+            } 
+            catch (error) {
                 if (error.response && error.response.status === 404) {
                     this.characters = [];
                     this.characterNotFound = true;
