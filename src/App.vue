@@ -1,6 +1,5 @@
 <template>
 <div>
-
     <body>
         <background-animation></background-animation>
         <div class="page-container relative min-h-screen">
